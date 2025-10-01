@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <!-- per importar tipografia Rubic externa -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Bookmart-landing-page</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <img src="assets/images/logo-bookmark.svg" alt="Bookmark logo">
+        </h1>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-hamburguer" aria-label="Open menu">
+            <img src="assets/images/icon-hamburger.svg" alt="Menu icon">
+        </label>
+
+        <nav class="nav-header">
+            <!-- Botó de tancament -->
+            <label for="menu-toggle" class="menu-close" aria-label="Close menu">
+                <img src="assets/images/icon-close.svg" alt="Close icon">
+            </label>
+            <div class="logo-hamburguesa"><img src="assets/images/logo-bookmark-menu.svg" alt="Bookmark logo"></div>
+
+            <ul class="nav-links">
+                <li><a href="#features">FEATURES</a></li> <!--enllaç intern-->
+                <li><a href="#" aria-disabled="true" style="pointer-events: none;">PRICING</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <button class="btn btn-login" aria-label="Login">Login</button>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook">
+                    <img src="assets/images/icon-facebook.svg" alt="Facebook icon">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="assets/images/icon-twitter.svg" alt="Twitter icon">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <!-- HERO SECTION -->
+        <section class="hero-section" aria-label="Hero section">
+            <article class="article-text">
+                <h2 class="hero-title">A Simple Bookmark Manager</h2>
+                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your
+                    sites load instantly. Try it for free.</p>
+                <div class="hero-buttons" role="group" aria-label="Browser download options"> <!--ARIA??-->
+                    <button class="btn btn-chrome" aria-label="Chrome button">Get it on Chrome</button>
+                    <button class="btn btn-firefox" aria-label="Firefox button">Get it on Firefox</button>
+                </div>
+            </article>
+            <figure>
+                <img src="assets/images/illustration-hero.svg" alt="Illustració de la aplicació Bookmark">
+                <div class="hero-background-shape"></div>
+            </figure>
+        </section>
+        <!-- HERO SECTION -->
+        <section id="features" aria-label="Features section">
+            <article class="article-text">
+                <h2>Features</h2>
+                <p>Our aim is to make it quick and easy for you to access your favourite websites...</p>
+            </article>
+
+            <div class="features-layout">
+                <div class="features-tabs">
+                    <!-- Inputs -->
+                    <input type="radio" name="featureTab" id="tab1" class="tab-toggle" checked>
+                    <input type="radio" name="featureTab" id="tab2" class="tab-toggle">
+                    <input type="radio" name="featureTab" id="tab3" class="tab-toggle">
+
+                    <!-- Labels -->
+                    <div class="tab-buttons" role="tablist">
+                        <label for="tab1" class="tab-button" role="tab">Simple Bookmarking</label>
+                        <label for="tab2" class="tab-button" role="tab">Speedy Searching</label>
+                        <label for="tab3" class="tab-button" role="tab">Easy Sharing</label>
+                    </div>
+
+                    <!-- Contingut pestanyes -->
+                    <div class="tabs-content-wrapper">
+                        <div class="tab-content-tab1" role="tabpanel">
+                            <figure>
+                                <img src="assets/images/illustration-features-tab-1.svg"
+                                    alt="Illustració secció features">
+                                <div class="features-background-shape"></div>
+                            </figure>
+                            <article class="article-text">
+                                <h2>Bookmark in one click</h2>
+                                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives
+                                    you complete control over how you manage your favourite sites</p>
+                                <button class="btn btn-info">More info</button>
+                            </article>
+                        </div>
+
+                        <div class="tab-content-tab2" role="tabpanel">
+                            <figure>
+                                <img src="assets/images/illustration-features-tab-2.svg"
+                                    alt="Illustració secció features">
+                                <div class="features-background-shape"></div>
+                            </figure>
+                            <article class="article-text">
+                                <h2>Intelligent search</h2>
+                                <p>Our powerful search feature will help you find saved sites in no time at all. No need
+                                    to trawl through all of your bookmarks.</p>
+                                <button class="btn btn-info">More info</button>
+                            </article>
+                        </div>
+
+                        <div class="tab-content-tab3" role="tabpanel">
+                            <figure>
+                                <img src="assets/images/illustration-features-tab-3.svg"
+                                    alt="Illustració secció features">
+                                <div class="features-background-shape"></div>
+                            </figure>
+                            <article class="article-text">
+                                <h2>Share your bookmarks</h2>
+                                <p>Easily share your bookmarks and collections with others. Create a shareable link that
+                                    you can send at the click of a button.</p>
+                                <button class="btn btn-info">More info</button>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        </div>
+        </section>
+
+
+        <!-- DOWNLOAD -->
+        <section id="download-section">
+            <article class="article-text">
+                <h2>Download the extension</h2>
+                <p>We've got more browsers in the pipeline.
+                    PLease do let us know if you've got a favourite you'd like to priorize.
+                </p>
+
+            </article>
+            <div class="extension-section">
+                <article class="extension-card">
+                    <img src="assets/images/logo-chrome.svg" alt="Instal extension with Chrome">
+                    <h3>Add to Chrome</h3>
+                    <p>Minimum version 62</p>
+                    <img src="assets/images/bg-dots.svg" alt="" class="dots">
+                    <button class="btn btn-extension" aria-label="Chrome extension download button">Add & install
+                        Extension</button>
+                </article>
+                <article class="extension-card">
+                    <img src="assets/images/logo-firefox.svg" alt="Instal extension with Firefox">
+                    <h3>Add to Firefox</h3>
+                    <p>Minimum version 55</p>
+                    <img src="assets/images/bg-dots.svg" alt="" class="dots">
+                    <button class="btn btn-extension" aria-label="Firefox extension download button">Add & install
+                        Extension</button>
+                </article>
+                <article class="extension-card">
+                    <img src="assets/images/logo-opera.svg" alt="Instal extension with Opera">
+                    <h3>Add to Opera</h3>
+                    <p>Minimum version 46</p>
+                    <img src="assets/images/bg-dots.svg" alt="" class="dots">
+                    <button class="btn btn-extension" aria-label="Opera extension download button">Add & install
+                        Extension</button>
+                </article>
+            </div>
+        </section>
+
+        <!--FAQs -->
+        <section id="faqs">
+            <article class="article-text">
+                <h2>Frequently Asked Questions</h2>
+                <p>Here are some of our FAQs. if you have any other questions you'd like answered,
+                    please feel free ro email us.
+                </p>
+            </article>
+            <details class="faq-item">
+                <summary>
+                    What is Bookmark?
+                    <img src="assets/images/icon-arrow.svg" class="faq-arrow" alt="arrow">
+                </summary>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            </details>
+            <details class="faq-item" open>
+                <summary>How can i request a new browser?
+                    <img src="assets/images/icon-arrow.svg" class="faq-arrow" alt="arrow">
+                </summary>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    Is there a mobile app?
+                    <img src="assets/images/icon-arrow.svg" class="faq-arrow" alt="">
+                </summary>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    What about other Chromium browser?
+                    <img src="assets/images/icon-arrow.svg" alt="">
+                </summary>
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+            </details>
+            <button class="btn btn-info">More info</button>
+        </section>
+        <!-- SUBSCRIBE -->
+        <section id="subscribe">
+            <div class="subscribe-background-shape"></div>
+
+            <div class="subscribe-container">
+                <p>35.000+ ALREADY JOINED</p>
+                <h2>Stay up-to-date with what we're doing</h2>
+                <form class="contact-form" novalidate>
+                    <label for="email" class="sr-only">Enter your email address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        <img src="assets/images/icon-error.svg" alt="" class="error-icon" aria-hidden="true">
+                        <p class="error-text">Whoops, make sure it’s an email</p>
+                    </div>
+                    <button type="submit" class="btn btn-contact">Contact Us</button>
+                </form>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="especial-logo"><img src="assets/images/logo-bookmark-footer.svg" alt="Bookmark logo"></div>
+        <nav class="nav-footer" aria-label="Footer navigation">
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="social">
+            <a href="#">
+                <img src="assets/images/icon-facebook.svg" alt="Follow us on FaceBook">
+            </a>
+            <a href="#">
+                <img src="assets/images/icon-twitter.svg" alt="Follow us on Twitter">
+            </a>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
