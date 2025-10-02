@@ -3,7 +3,7 @@
 /* ===================== */
 * {
   margin: 0;
-  padding: 0;
+  padding-top: 0;
   box-sizing: border-box;
 }
 
@@ -28,11 +28,12 @@ h3 {
   margin-bottom: 1rem;
 }
 p {
-  font-size: 1rem;
+  font-size: 1.35rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   color: var(--text-paragraph);
 }
+
 /* VARIABLES */
 /* ----------*/
 :root {
@@ -42,6 +43,8 @@ p {
   --font-base: "Rubik", sans-serif;
   --primary-color: #5364db;
   --accent-color: #ef5f5f;
+  --dark-color: #0c0b0b;
+  
 }
 /* Globals */
 .btn {
@@ -69,6 +72,7 @@ p {
 .btn-login:hover {
   background-color: var(--bg-color);
   color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
 .btn-chrome:hover {
@@ -77,6 +81,19 @@ p {
   border: 2px solid var(--primary-color);
 }
 
+.btn-firefox:hover {
+ 
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+}
+
+.btn-firefox {
+  color: var(--primary-color);
+  background-color: transparent;
+  cursor: pointer;
+ box-shadow: 15px 15px 15px 15px rgba(21, 7, 7, 0.05);
+
+}
 .tab-button:hover {
   color: var(--accent-color);
 }
@@ -86,6 +103,16 @@ p {
 }
 .nav-links li:hover a {
   color: var(--accent-color);
+}
+
+.nav-footer a:hover {
+  color: var(--accent-color);
+}
+
+/* filter!! */
+.social a:hover img {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
+    hue-rotate(342deg) brightness(94%) contrast(91%);
 }
 
 .faq-item summary:hover {
@@ -114,7 +141,7 @@ p {
 .btn-info:hover {
   background-color: var(--bg-color);
   color: var(--text-color);
-  border: 2px solid var(--primary-color); /* 👈 mostra la bora */
+  border: 2px solid var(--primary-color);
   border-radius: 1rem;
 }
 
@@ -130,13 +157,6 @@ p {
   color: white;
 }
 
-.btn-firefox {
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
-  background-color: transparent;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
 
 .btn-info {
   width: 60%;
@@ -192,7 +212,7 @@ p {
   height: 100vh;
   background-color: white;
   flex-direction: column;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
   gap: 2rem;
   z-index: 1000;
@@ -207,7 +227,7 @@ p {
   height: 100vh;
   background-color: rgba(25, 31, 53, 0.95);
   flex-direction: column;
-  justify-content: center;
+  text-align: end;
   align-items: center;
   gap: 2rem;
 }
@@ -217,13 +237,16 @@ p {
   padding: 0;
   margin: 0;
   text-align: center;
-  width: 70%;
+  width: 90%;
+  margin-top: 20%;
 }
 .nav-links li {
   padding: 0.5rem;
   border-top: 0.5px solid var(--bg-color);
   width: 100%;
   text-align: center;
+  padding: 2rem;
+  
 }
 .nav-links li:last-child {
   border-bottom: 1px solid var(--bg-color);
@@ -231,7 +254,7 @@ p {
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
+  font-size: 2rem;
   display: block;
   padding: 1rem 0;
   background-color: transparent;
@@ -241,24 +264,22 @@ p {
 
 .social-icons {
   display: flex;
-  gap: 2rem;
-  margin-top: 3vw;
+  gap: 3rem;
+  margin-top: 50%;
 }
-.social-icons img {
-  width: 24px;
-  height: 24px;
-}
+
 .logo-hamburguesa {
   display: flex;
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   left: 3rem;
   z-index: 1100;
 }
 
 .menu-close {
+   
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   right: 3rem;
   cursor: pointer;
   z-index: 1100;
@@ -294,18 +315,20 @@ p {
   flex-wrap: wrap;
 }
 
-.article-text,
+
 .hero-title {
   width: 100%;
   max-width: 500px;
   text-align: center;
   padding: 1rem;
+  padding-left: 0.5rem;
   z-index: 1;
 }
 .hero-title {
   font-size: clamp(1.5rem, 5vw, 2.25rem);
   color: var(--text-color);
 }
+
 .hero-background-shape {
   display: flex;
   position: absolute;
@@ -332,7 +355,9 @@ p {
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  width: 100%;
+  width: 80%;
+  margin-left: 3rem;
+  padding-top: 2rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -529,13 +554,13 @@ figure {
   height: 1rem;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: invert(29%) sepia(94%) saturate(747%) hue-rotate(191deg)
-  brightness(94%) contrast(92%);
+    brightness(94%) contrast(92%);
 }
 
 .faq-item[open] .faq-arrow {
   transform: rotate(180deg);
   filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg)
-  brightness(92%) contrast(91%);
+    brightness(92%) contrast(91%);
 }
 
 .faq-item p {
@@ -627,7 +652,7 @@ figure {
 
 .error-text {
   background-color: var(--accent-color);
-  color: white; 
+  color: white;
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -730,14 +755,15 @@ figure {
 /* MEDIA QUERIES: DESKTOP */
 /* ===================== */
 @media (min-width: 768px) {
+
   
+
   .social-icons,
   .menu-close img,
   .logo-hamburguesa,
   .menu-hamburguer {
     display: none;
   }
-  
 
   .btn-login {
     padding: 0.5rem 1rem;
@@ -766,14 +792,15 @@ figure {
     background: hsl(0, 94%, 66%);
     border-radius: 2px;
   }
-/* ===================== */
-/* HEADER              */
-/* ===================== */
+  /* ===================== */
+  /* HEADER              */
+  /* ===================== */
   .header {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 1rem;
   }
- 
+
   .logo {
     margin: 1rem;
     flex: 1;
@@ -783,7 +810,7 @@ figure {
     width: 60%;
     padding: 0;
   }
-  
+
   .nav-header {
     display: flex;
     position: static;
@@ -821,93 +848,105 @@ figure {
     justify-content: center;
   }
 
-
   /* ===================== */
   /* HERO             */
- /* ===================== */
-  .hero-section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4rem 2rem;
-    position: relative;
-    overflow: hidden;
-    min-height: 80vh;
-  }
+  /* ===================== */
 
-  .hero-title {
-    font-size: 2.5rem;
-    text-align: left;
-  }
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
 
-  .hero-background-shape {
-    position: absolute;
-    top: 35%;
-    width: 90%;
-    max-height: 30vh;
-    aspect-ratio: 2 / 1;
-    height: auto;
-    z-index: -1;
-    background-color: hsl(231, 74%, 50%);
-    border-top-left-radius: 200px;
-    border-bottom-left-radius: 200px;
-  }
-  .hero-section figure {
-    flex: 1;
-    max-width: 600px;
-    position: relative;
-    z-index: 1;
-  }
+.hero-background-shape {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  aspect-ratio: 2 / 1;
+  width: 110%;
+  max-height: 50vh;
+  height: auto;
+  z-index: -1;
+  background-color: hsl(231, 74%, 50%);
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
+}
+.hero-section .article-text p {
+  text-align: left;
+  margin-bottom: 1rem;
+  padding-left: 17%;
+}
 
-  .hero-section figure img {
-    width: 100%;
-    height: auto;
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
-  }
+
 
   /* ===================== */
-  /* FEATURES              */
+  /* FEATURES            */
   /* ===================== */
+
   .features {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 4rem;
-  }
-
-  .tabs-content-wrapper > div {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .tabs-content-wrapper figure {
-    position: relative;
-    margin: 0;
+    margin-top: 5rem;
   }
 
   .tabs-content-wrapper > div {
     display: none;
+    margin-top: 2rem;
+  }
+
+  #tab1:checked ~ .tabs-content-wrapper .tab-content-tab1,
+  #tab2:checked ~ .tabs-content-wrapper .tab-content-tab2,
+  #tab3:checked ~ .tabs-content-wrapper .tab-content-tab3 {
+    display: flex;           /* horitzontal */
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .tabs-content-wrapper figure {
+    flex: 1;                 
+    margin: 0;               
+    position: relative;
+    max-width: 800px;
+    z-index: 1;
+  }
+
+  .tabs-content-wrapper figure img {
+
+    height: auto;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tabs-content-wrapper .article-text {
+    flex: 1;                 
+    margin: 0;
+    padding-left: 3rem;      
+    text-align: left;
   }
 
   .features-background-shape {
     position: absolute;
-    bottom: -20px;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background: #f0f0f0;
-    border-radius: 10px;
+    bottom: -10%;
+    width: 80%;
+    aspect-ratio: 2 / 1;
+    height: auto;
     z-index: -1;
+    background-color: hsl(231, 74%, 50%);
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
   }
-
-  .article-text {
-    flex: 1;
-  }
+}
 
   /* ===================== */
   /* DOWNLOAD              */
@@ -915,6 +954,8 @@ figure {
   .extension-section {
     grid-template-columns: repeat(3, 1fr);
     width: 90%;
+    margin-top: 5rem;
+
   }
 
   .extension-card:nth-child(2) {
@@ -932,6 +973,8 @@ figure {
   /* ===================== */
   #faqs {
     padding: 2rem 4rem;
+    margin-top: 5rem;
+
   }
 
   .faq-item {
@@ -978,10 +1021,13 @@ figure {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    align-items: center;
+    padding: 0;
   }
 
   .input-wrapper {
     flex: 3;
+    padding: 0;
   }
 
   .btn-contact {
@@ -999,6 +1045,29 @@ figure {
     margin-bottom: -3rem;
   }
 
+  .input-wrapper {
+  position: relative; 
+  width: 100%;
+  max-width: 400px;
+}
+
+.error-text {
+  position: absolute;     
+  left: 0;
+  top: 100%;                
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 0.25rem;  
+  display: none;
+  text-align: left;
+  width: 100%;            
+  box-sizing: border-box;
+  z-index: 2;             
+}
+
   /* ===================== */
   /*FOTTER                 */
   /* ===================== */
@@ -1006,7 +1075,7 @@ figure {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
     flex-wrap: wrap;
     gap: 2rem;
   }
@@ -1021,7 +1090,7 @@ figure {
   .social {
     display: flex;
     gap: 2rem;
-    margin-left: auto; 
+    margin-left: auto;
     margin-top: 0;
   }
 
@@ -1029,6 +1098,7 @@ figure {
     display: inline-block;
     transition: transform 0.3s ease, opacity 0.3s ease;
     margin-top: 0;
+    padding-top: 0;
   }
 
   .nav-footer ul {
@@ -1041,4 +1111,4 @@ figure {
     justify-content: start;
     flex-direction: row;
   }
-}
+
