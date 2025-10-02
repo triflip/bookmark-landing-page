@@ -1,0 +1,70 @@
+//  Botons i petits components reutilitzables
+
+.btn {
+  display: inline-block;
+  font-size: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 20%;
+  padding: 1rem 0.5rem;
+  color: white;
+  text-align: center;
+  @include transition(background-color 0.3s ease);
+
+  &-contact,
+  &-login {
+    background-color: $accent-color;
+    color: white;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $accent-color;
+      border: 2px solid $accent-color;
+    }
+  }
+
+  &-chrome {
+    &:hover {
+      background-color: $bg-color;
+      color: $primary-color;
+      border: 2px solid $primary-color;
+    }
+  }
+
+  &-firefox {
+    width: 45%;
+    color: $text-color;
+    border: 2px solid $text-color;
+    background-color: transparent;
+    border-radius: 0.5rem;
+  }
+
+  &-extension {
+    width: 80%;
+    border: 2px solid $primary-color;
+    background-color: $primary-color;
+    color: $bg-color;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $text-color;
+    }
+  }
+
+  &-info {
+    width: 60%;
+    max-width: 300px;
+    white-space: nowrap;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+
+    &:hover {
+      background-color: $bg-color;
+      color: $text-color;
+      border: 2px solid $primary-color;
+      border-radius: 1rem;
+    }
+  }
+}
