@@ -1,0 +1,35 @@
+//  Resets
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $font-base;
+  color: $text-color;
+}
+
+// Tipografia base
+h2,
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: $text-color;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: $text-paragraph;
+}
