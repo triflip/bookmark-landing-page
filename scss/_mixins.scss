@@ -1,0 +1,11 @@
+@mixin transition($props...) {
+  transition: $props;
+}
+
+@mixin respond-to($bp) {
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+}
