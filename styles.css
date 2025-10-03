@@ -71,12 +71,6 @@ p {
   border: none;
   cursor: pointer;
   transition: var(--bg-color) 0.3s ease;
-}
-
-.btn-contact,
-.btn-login {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
   text-align: center;
 }
 
@@ -146,11 +140,7 @@ p {
   border-radius: 1rem;
 }
 
-.btn-login {
-  padding: 0.5rem 1rem;
-  border: 0.5vw solid white;
-  background-color: #d94e4e;
-}
+
 .btn-contact:hover {
   background-color: #f3f0f0;
 }
@@ -382,13 +372,6 @@ p {
   width: 100%;
   height: auto;
 }
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 /* ===================== */
 /* FEATURES              */
@@ -595,7 +578,7 @@ figure {
 .faq-item[open] .faq-arrow {
   transform: rotate(180deg);
   filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg)
-    brightness(92%) contrast(91%);
+  brightness(92%) contrast(91%);
 }
 
 /* ===================== */
@@ -727,7 +710,7 @@ figure {
 
 .nav-footer a {
   text-decoration: none;
-  color: white;
+  color: var(--bg-color);
   font-weight: 500;
   transition: opacity 0.3s ease;
 }
@@ -776,23 +759,24 @@ figure {
   .menu-hamburguer {
     display: none;
   }
+.btn-login {
+  width: 20%;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  
+}
 
-  .btn-login {
-    padding: 0.5rem 1rem;
-    border: 0.5vw solid white;
-    background-color: #d94e4e;
-  }
-  .btn-contact:hover {
-    background-color: #f3f0f0;
-  }
-  .tab-buttons {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #cccccc;
-  }
+.btn-login:hover  {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
   .tab-button::after {
     content: "";
     position: absolute;
@@ -818,7 +802,7 @@ figure {
   }
 
   .logo img {
-    width: 60%;
+    width: 40%;
     padding: 0;
   }
 
@@ -873,20 +857,37 @@ figure {
     margin-bottom: 2rem;
     flex-wrap: wrap;
   }
+
   .hero-title {
     width: 100%;
-    font-size: 3rem;
+    font-size: 2.9rem;
     text-align: start;
     padding: 1rem;
     padding-left: 0.5rem;
     z-index: 1;
+    flex-wrap: wrap;
   }
 
   .hero-text {
     flex-wrap: wrap;
     text-align: start;
+    padding-left: 2.6rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: end;;
   }
 
+   .hero-section figure img {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    flex: 1;
+   }
   .hero-background-shape {
     display: flex;
     position: absolute;
