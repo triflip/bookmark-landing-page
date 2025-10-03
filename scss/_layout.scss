@@ -5,20 +5,82 @@
 .header {
   @include flex-between;
   padding: 5vw;
+  max-width: 90%;
+  margin: 0 auto;
   @include centered-container;
-
+  
   @media (min-width: $bp-desktop) {
     padding: 3vw;
+    .menu-toggle,
+    .logo-hamburguesa,
+    .menu-hamburguer,
+    .menu-close img,
+    .social-icons,
+    .social-icons a {
+      display: none;
+    }
+  }
+  .menu-toggle:checked ~ & {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(25, 31, 53, 0.95);
+    @include flex-column(center, center, 2rem);
+    z-index: 1000;
   }
 }
 
 .logo {
-  width: 50%;
+  width: 30%;
   height: auto;
 
   img {
     @include responsive-img;
+    padding: 0.5rem;
   }
+    
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+.menu-hamburguer {
+  cursor: pointer;
+  width: 10%;
+  height: auto;
+
+  img {
+    max-width: 190%;
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  z-index: 1100;
+
+  img {
+    width: 3vw;
+    height: 3vw;
+  }
+}
+
+.logo-hamburguesa {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  z-index: 1100;
 }
 
 .nav-header {
@@ -28,16 +90,93 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: $bg-color; 
+  background-color: $bg-color;
   @include flex-column(baseline, center, 2rem);
   z-index: 1000;
 
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    width: 70%;
+
+    li {
+      padding: 0.5rem;
+      border-top: 0.5px solid $bg-color;
+      width: 100%;
+      text-align: center;
+
+      &:last-child {
+        border-bottom: 1px solid $bg-color;
+      }
+
+      a {
+        text-decoration: none;
+        color: $bg-color;
+        font-size: 1rem;
+        display: block;
+        padding: 1rem 0;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      &:hover {
+        background-color: $bg-color;
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3vw;
+
+    a img {
+      transition: filter 0.3s ease;
+
+      &:hover {
+        filter: $filter-color;
+      }
+    }
+  }
+
   @media (min-width: $bp-desktop) {
+    display: flex;
+    position: static;
+    height: auto;
+    width: auto;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: auto;
-    position: static;
     background-color: transparent;
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      width: auto;
+      margin: 0;
+
+      li {
+        border: none;
+        padding: 0;
+
+        a {
+          display: flex;
+          width: 100%;
+          color: $text-color;
+          font-size: clamp(0.5rem, 2vw, 1rem);
+          justify-content: center;
+        }
+      }
+    }
+    
+    
   }
 }

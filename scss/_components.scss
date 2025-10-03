@@ -8,51 +8,51 @@
   transition: background-color 0.3s ease;
   width: 20%;
   padding: 1rem 0.5rem;
-  color: var(--bg-color);
+  color: $bg-color;
   text-align: center;
 }
 
 .btn-contact,
 .btn-login {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  background-color: $accent-color;
+  color: $bg-color;
   text-align: center;
 }
 
 .btn-contact:hover,
 .btn-login:hover {
-  background-color: var(--bg-color);
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  background-color: $bg-color;
+  color: $accent-color;
+  border: 2px solid $accent-color;
 }
 
 .btn-chrome:hover {
-  background-color: var(--bg-color);
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  background-color: $bg-color;
+  color: $primary-color;
+  border: 2px solid $primary-color;
 }
 
 .tab-button:hover {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .nav-links li:hover {
-  background-color: var(--bg-color);
+  background-color: $bg-color;
 }
 .nav-links li:hover a {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .nav-footer a:hover {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .social a:hover img {
-  filter: var(--filter--color);
+  filter: $filter-color;
 }
 
 .faq-item summary:hover {
-  color: var(--accent-color);
+  color: $accent-color;
 }
 
 .btn-extension {
@@ -60,24 +60,24 @@
   font-size: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-  background-color: var(--primary-color);
-  color: var(--bg-color);
+  background-color: $primary-color;
+  color: $bg-color;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border: 2px solid var(--primary-color);
+  border: 2px solid $primary-color;
 }
 
 .btn-extension:hover {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border: 2px solid var(--primary-color);
+  background-color: $bg-color;
+  color: $text-color;
+  border: 2px solid $primary-color;
 }
 
 .btn-info:hover {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border: 2px solid var(--primary-color);
+  background-color: $bg-color;
+  color: $text-color;
+  border: 2px solid $primary-color;
   border-radius: 1rem;
 }
 
@@ -89,13 +89,13 @@
 .btn-info,
 .btn-chrome,
 .btn-extension {
-  background-color: var(--primary-color);
-  color: var(--bg-color)
+  background-color: $primary-color;
+  color: $bg-color;
 }
 
 .btn-firefox {
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
+  color: $text-color;
+  border: 2px solid $text-color;
   background-color: transparent;
   border-radius: 0.5rem;
   cursor: pointer;
