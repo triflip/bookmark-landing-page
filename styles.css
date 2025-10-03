@@ -43,6 +43,9 @@ p {
   --font-base: "Rubik", sans-serif;
   --primary-color: #5364db;
   --accent-color: #ef5f5f;
+  --bg-tmenu-color: rgba(25, 31, 53, 0.95);
+  --filter--color:  brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
+    hue-rotate(342deg) brightness(94%) contrast(91%);
 }
 /* Globals */
 .btn {
@@ -55,14 +58,14 @@ p {
   transition: background-color 0.3s ease;
   width: 20%;
   padding: 1rem 0.5rem;
-  color: white;
+  color: var(--bg-color);
   text-align: center;
 }
 
 .btn-contact,
 .btn-login {
   background-color: var(--accent-color);
-  color: white;
+  color: var(--bg-color);
   text-align: center;
 }
 
@@ -94,10 +97,8 @@ p {
   color: var(--accent-color);
 }
 
-/* filter!! */
 .social a:hover img {
-  filter: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
-    hue-rotate(342deg) brightness(94%) contrast(91%);
+  filter: var(--filter--color);
 }
 
 .faq-item summary:hover {
@@ -139,7 +140,7 @@ p {
 .btn-chrome,
 .btn-extension {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--bg-color)
 }
 
 .btn-firefox {
@@ -202,7 +203,7 @@ p {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: var(--bg-color);
   flex-direction: column;
   justify-content: baseline;
   align-items: center;
@@ -217,7 +218,7 @@ p {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(25, 31, 53, 0.95);
+  background-color: var(--bg-tmenu-color);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -242,7 +243,7 @@ p {
 }
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: var(--bg-color);
   font-size: 1rem;
   display: block;
   padding: 1rem 0;

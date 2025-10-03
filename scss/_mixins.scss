@@ -1,7 +1,4 @@
-@mixin transition($props...) {
-  transition: $props;
-}
-
+// @media
 @mixin respond-to($bp) {
   @if $bp == desktop {
     @media (min-width: $bp-desktop) {
@@ -9,3 +6,33 @@
     }
   }
 }
+
+// Flexbox amb distribució space-between
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Contenidors centrats amb amplada màxima
+@mixin centered-container($max-width: 90%) {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+// Cmatges responsives amb padding opcional
+@mixin responsive-img($padding: 0.5rem) {
+  width: 100%;
+  height: auto;
+  padding: $padding;
+}
+
+// Columnes amb Flexbox i paràmetres personalitzables
+@mixin flex-column($justify: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+

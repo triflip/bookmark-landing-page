@@ -4,6 +4,9 @@ $text-color: #262c40;
 $text-paragraph: hsl(240, 1%, 47%);
 $primary-color: #5364db;
 $accent-color: #ef5f5f;
+$bg-tmenu-color: rgba(25, 31, 53, 0.95);
+$filter-color:  brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
+    hue-rotate(342deg) brightness(94%) contrast(91%);
 
 // Fonts
 $font-base: "Rubik", sans-serif;

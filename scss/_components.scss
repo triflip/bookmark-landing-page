@@ -1,27 +1,58 @@
-// Botons
-
 .btn {
   display: inline-block;
   font-size: 1rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
+  border-radius: 1rem;
   transition: background-color 0.3s ease;
   width: 20%;
   padding: 1rem 0.5rem;
-  color: white;
+  color: var(--bg-color);
   text-align: center;
 }
 
 .btn-contact,
 .btn-login {
-  background-color: $accent-color;
-  color: white;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  text-align: center;
+}
 
-  &:hover {
-    background-color: $bg-color;
-    color: $accent-color;
-  }
+.btn-contact:hover,
+.btn-login:hover {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-chrome:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.tab-button:hover {
+  color: var(--accent-color);
+}
+
+.nav-links li:hover {
+  background-color: var(--bg-color);
+}
+.nav-links li:hover a {
+  color: var(--accent-color);
+}
+
+.nav-footer a:hover {
+  color: var(--accent-color);
+}
+
+.social a:hover img {
+  filter: var(--filter--color);
+}
+
+.faq-item summary:hover {
+  color: var(--accent-color);
 }
 
 .btn-extension {
@@ -29,16 +60,45 @@
   font-size: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-  background-color: $primary-color;
-  color: $bg-color;
-  border: 2px solid $primary-color;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border: 2px solid var(--primary-color);
+}
 
-  &:hover {
-    background-color: $bg-color;
-    color: $text-color;
-  }
+.btn-extension:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-info:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+}
+
+.btn-chrome,
+.btn-firefox {
+  width: 45%;
+}
+
+.btn-info,
+.btn-chrome,
+.btn-extension {
+  background-color: var(--primary-color);
+  color: var(--bg-color)
+}
+
+.btn-firefox {
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-info {
@@ -49,37 +109,4 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: $primary-color;
-  color: white;
-
-  &:hover {
-    background-color: $bg-color;
-    color: $text-color;
-    border: 2px solid $primary-color;
-    border-radius: 1rem;
-  }
-}
-
-.btn-chrome,
-.btn-firefox {
-  width: 45%;
-}
-
-.btn-chrome {
-  background-color: $primary-color;
-  color: white;
-
-  &:hover {
-    background-color: $bg-color;
-    color: $primary-color;
-    border: 2px solid $primary-color;
-  }
-}
-
-.btn-firefox {
-  color: $text-color;
-  border: 2px solid $text-color;
-  background-color: transparent;
-  border-radius: 0.5rem;
-  cursor: pointer;
 }
