@@ -44,12 +44,11 @@ p {
   --primary-color: #5364db;
   --accent-color: #ef5f5f;
   --tg-menu-color: rgba(25, 31, 53, 0.95);
-  --tab-color: hsl(229, 8%, 60%);
   --filter-color: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
-    hue-rotate(342deg) brightness(94%) contrast(91%);
-    --tab-btn-color: hsl(229, 8%, 60%);
-    --tab-buttons: #ccc;
-    --shape: hsl(231, 74%, 50%);
+  hue-rotate(342deg) brightness(94%) contrast(91%);
+  --tab-color: hsl(229, 8%, 60%);
+  --tab-buttons: #ccc;
+  --shape: hsl(231, 74%, 50%);
 }
 /* Globals */
 .btn {
@@ -406,7 +405,7 @@ p {
   padding: 0.75rem;
   cursor: pointer;
   font-weight: 600;
-  color: var(--tab-btn-color);
+  color: var(--tab-color);
   position: relative;
 }
 
