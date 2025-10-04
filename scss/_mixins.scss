@@ -1,34 +1,21 @@
-// @media
-@mixin respond-to($bp) {
-  @if $bp == desktop {
-    @media (min-width: $bp-desktop) {
-      @content;
-    }
-  }
-}
+// ==========================================
+// SCSS Mixins
+// ==========================================
 
-// Flexbox amb distribució space-between
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-// Contenidors centrats amb amplada màxima
-@mixin centered-container($max-width: 90%) {
-  max-width: $max-width;
-  margin: 0 auto;
+// problemes menu toggle
+@mixin flex-column-no-display($justify: center, $align: center, $gap: 0) {
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
 }
 
-// Cmatges responsives amb padding opcional
-@mixin responsive-img($padding: 0.5rem) {
-  width: 100%;
-  height: auto;
-  padding: $padding;
-}
-
-// Columnes amb Flexbox i paràmetres personalitzables
-@mixin flex-column($justify: center, $align: center, $gap: 0) {
+@mixin flex-column($justify: flex-start, $align: stretch, $gap: 0) {
   display: flex;
   flex-direction: column;
   justify-content: $justify;
@@ -36,3 +23,17 @@
   gap: $gap;
 }
 
+@mixin responsive-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@mixin centered-container {
+  max-width: 90%; // O el teu valor màxim de contingut
+  margin: 0 auto;
+}
+
+@mixin card-shadow {
+  box-shadow: 9px 9px 10px 10px rgba(0, 0, 0, 0.05);
+}

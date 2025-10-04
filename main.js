@@ -16,7 +16,7 @@ document.querySelector(".contact-form").addEventListener("submit", function (e) 
     emailInput.classList.remove("invalid");
     errorIcon.style.display = "none";
     errorText.style.display = "none";
-    // Aquí pots mostrar un missatge d’èxit o fer el submit real
+    // Puc afegir nissatge d'èxit
   }
 });
 

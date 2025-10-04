@@ -1,14 +1,19 @@
+// ==========================================
+// SCSS Variables
+// ==========================================
+
 // Colors
 $bg-color: #fdfdfd;
 $text-color: #262c40;
 $text-paragraph: hsl(240, 1%, 47%);
 $primary-color: #5364db;
 $accent-color: #ef5f5f;
-$bg-tmenu-color: rgba(25, 31, 53, 0.95);
-$filter-color:  brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
-    hue-rotate(342deg) brightness(94%) contrast(91%);
+$tg-menu-color: rgba(25, 31, 53, 0.95);
+$blue-background: hsl(231, 74%, 50%); // Per a les formes de fons
+$gray-light: #cccccc; // Color de la línia de la pestanya
+$gray-hover: hsl(229, 8%, 60%); // Color de text de les pestanyes
 
-// Fonts
+// Tipografia
 $font-base: "Rubik", sans-serif;
 
 // Breakpoints

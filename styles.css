@@ -21,14 +21,14 @@ body {
 /* Tipografia base */
 h2,
 h3 {
-  font-size: 1.75rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--text-color);
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 p {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   line-height: 1.6;
   margin-bottom: 1rem;
   color: var(--text-paragraph);
@@ -43,9 +43,13 @@ p {
   --font-base: "Rubik", sans-serif;
   --primary-color: #5364db;
   --accent-color: #ef5f5f;
-  --bg-tmenu-color: rgba(25, 31, 53, 0.95);
-  --filter--color:  brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
-    hue-rotate(342deg) brightness(94%) contrast(91%);
+  --tg-menu-color: rgba(25, 31, 53, 0.95);
+  --filter-color: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
+  hue-rotate(342deg) brightness(94%) contrast(91%);
+  --tab-color: hsl(229, 8%, 60%);
+  --tab-buttons: #ccc;
+  --shape: hsl(231, 74%, 50%);
+  
 }
 /* Globals */
 .btn {
@@ -55,25 +59,42 @@ p {
   border-radius: 0.5rem;
   cursor: pointer;
   border-radius: 1rem;
-  transition: background-color 0.3s ease;
+  
   width: 20%;
   padding: 1rem 0.5rem;
   color: var(--bg-color);
   text-align: center;
 }
 
-.btn-contact,
-.btn-login {
+.btn-contact {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
   background-color: var(--accent-color);
   color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  transition: var(--bg-color) 0.3s ease;
   text-align: center;
 }
 
-.btn-contact:hover,
-.btn-login:hover {
+.btn-contact:hover {
   background-color: var(--bg-color);
   color: var(--accent-color);
   border: 2px solid var(--accent-color);
+}
+
+.btn-info,
+.btn-chrome,
+.btn-extension {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+.btn-chrome,
+.btn-firefox {
+  width: 45%;
 }
 
 .btn-chrome:hover {
@@ -81,28 +102,12 @@ p {
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
 }
-
-.tab-button:hover {
-  color: var(--accent-color);
-}
-
-.nav-links li:hover {
-  background-color: var(--bg-color);
-}
-.nav-links li:hover a {
-  color: var(--accent-color);
-}
-
-.nav-footer a:hover {
-  color: var(--accent-color);
-}
-
-.social a:hover img {
-  filter: var(--filter--color);
-}
-
-.faq-item summary:hover {
-  color: var(--accent-color);
+.btn-firefox {
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-extension {
@@ -124,33 +129,6 @@ p {
   border: 2px solid var(--primary-color);
 }
 
-.btn-info:hover {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border: 2px solid var(--primary-color);
-  border-radius: 1rem;
-}
-
-.btn-chrome,
-.btn-firefox {
-  width: 45%;
-}
-
-.btn-info,
-.btn-chrome,
-.btn-extension {
-  background-color: var(--primary-color);
-  color: var(--bg-color)
-}
-
-.btn-firefox {
-  color: var(--text-color);
-  border: 2px solid var(--text-color);
-  background-color: transparent;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
 .btn-info {
   width: 60%;
   max-width: 300px;
@@ -159,6 +137,52 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn-info:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+}
+
+
+.btn-contact:hover {
+  background-color: var(--bg-color);
+}
+
+.nav-links li:hover {
+  background-color: var(--bg-color);
+}
+.nav-links li:hover a {
+  color: var(--accent-color);
+}
+
+.nav-footer a:hover {
+  color: var(--accent-color);
+}
+
+.tab-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: max-content;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.tab-button:hover {
+  color: var(--accent-color);
+}
+/* filter!! */
+.social a:hover img {
+  filter: var(--filter-color)
+}
+
+.faq-item summary:hover {
+  color: var(--accent-color);
 }
 
 /* HEADERr */
@@ -218,7 +242,7 @@ p {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: var(--bg-tmenu-color);
+  background-color: var(--tg-menu-color);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -287,7 +311,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-
   padding-bottom: 0;
 }
 /* ===================== */
@@ -332,7 +355,7 @@ p {
   max-height: 40vh;
   height: auto;
   z-index: -1;
-  background-color: hsl(231, 74%, 50%);
+  background-color: var(--shape);
   border-top-left-radius: 200px;
   border-bottom-left-radius: 200px;
 }
@@ -344,13 +367,6 @@ p {
 .hero-section figure img {
   width: 100%;
   height: auto;
-}
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 /* ===================== */
@@ -381,7 +397,7 @@ p {
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--tab-buttons);
 }
 
 .tab-button {
@@ -389,7 +405,7 @@ p {
   padding: 0.75rem;
   cursor: pointer;
   font-weight: 600;
-  color: hsl(229, 8%, 60%);
+  color: var(--tab-color);
   position: relative;
 }
 
@@ -402,7 +418,7 @@ p {
   left: 0;
   width: 100%;
   height: 3px;
-  background: hsl(0, 94%, 66%);
+  background: var(--accent-color);
   border-radius: 2px;
 }
 
@@ -445,7 +461,7 @@ figure {
 .features-background-shape {
   width: 100%;
   height: 11rem;
-  background-color: hsl(231, 74%, 50%);
+  background-color: var(--shape);
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
   margin-top: -40%;
@@ -462,16 +478,17 @@ figure {
 }
 
 .extension-section {
-  display: grid;
+  display: flex;
   width: 70%;
   margin: 2rem auto;
   gap: 2.5rem;
-  grid-template-columns: 1fr;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .extension-card {
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 12px;
   box-shadow: 9px 9px 10px 10px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -522,7 +539,7 @@ figure {
 }
 
 .faq-item {
-  background-color: white;
+  background-color: var(--bg-color);
   border-bottom: 0.2px solid var(--text-paragraph);
   margin-bottom: 1rem;
   padding: 1rem;
@@ -535,11 +552,17 @@ figure {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.3rem;
   cursor: pointer;
   padding-right: 0;
 }
 
+.faq-item p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: var(--text-paragraph);
+  line-height: 1.5;
+}
 .faq-arrow {
   width: 1rem;
   height: 1rem;
@@ -551,14 +574,7 @@ figure {
 .faq-item[open] .faq-arrow {
   transform: rotate(180deg);
   filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg)
-    brightness(92%) contrast(91%);
-}
-
-.faq-item p {
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  color: var(--text-paragraph);
-  line-height: 1.5;
+  brightness(92%) contrast(91%);
 }
 
 /* ===================== */
@@ -570,11 +586,11 @@ figure {
   overflow: hidden;
 }
 #subscribe h2 {
-  color: white;
+  color: var(--bg-color);
 }
 
 #subscribe p {
-  color: white;
+  color: var(--bg-color);
 }
 
 .subscribe-background-shape {
@@ -583,7 +599,7 @@ figure {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: hsl(231, 74%, 50%);
+  background-color:var(--shape);
   z-index: 0;
 }
 
@@ -643,7 +659,7 @@ figure {
 
 .error-text {
   background-color: var(--accent-color);
-  color: white;
+  color: var(--bg-color);
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -664,19 +680,6 @@ figure {
   border: 0;
 }
 
-.btn-contact {
-  width: 100%;
-  max-width: 400px;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  background-color: var(--accent-color);
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
 /* ===================== */
 /* FOTTER  */
 /* ===================== */
@@ -684,7 +687,7 @@ figure {
   background-color: var(--text-color);
   padding: 2rem;
   text-align: center;
-  color: white;
+  color:var(--bg-color);
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
@@ -703,7 +706,7 @@ figure {
 
 .nav-footer a {
   text-decoration: none;
-  color: white;
+  color: var(--bg-color);
   font-weight: 500;
   transition: opacity 0.3s ease;
 }
@@ -746,41 +749,38 @@ figure {
 /* MEDIA QUERIES: DESKTOP */
 /* ===================== */
 @media (min-width: 768px) {
-
-  
-
   .social-icons,
   .menu-close img,
   .logo-hamburguesa,
   .menu-hamburguer {
     display: none;
   }
+.btn-login {
+  width: 20%;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  
+}
 
-  .btn-login {
-    padding: 0.5rem 1rem;
-    border: 0.5vw solid white;
-    background-color: #d94e4e;
-  }
-  .btn-contact:hover {
-    background-color: #f3f0f0;
-  }
-  .tab-buttons {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #cccccc;
-  }
+.btn-login:hover  {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
   .tab-button::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 100%;
-
     width: max-content;
     height: 3px;
-    background: hsl(0, 94%, 66%);
+    background: var(--accent-color);
     border-radius: 2px;
   }
   /* ===================== */
@@ -798,7 +798,7 @@ figure {
   }
 
   .logo img {
-    width: 60%;
+    width: 40%;
     padding: 0;
   }
 
@@ -843,31 +843,64 @@ figure {
   /* HERO             */
   /* ===================== */
 
-.hero-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 2rem 1rem;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
+  .hero-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 1rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .hero-title {
+    width: 100%;
+    font-size: 2.9rem;
+    text-align: start;
+    padding: 1rem;
+    padding-left: 0.5rem;
+    z-index: 1;
+    flex-wrap: wrap;
+  }
 
-.hero-background-shape {
-  display: flex;
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  aspect-ratio: 2 / 1;
-  width: 110%;
-  max-height: 50vh;
-  height: auto;
-  z-index: -1;
-  background-color: hsl(231, 74%, 50%);
-  border-top-left-radius: 200px;
-  border-bottom-left-radius: 200px;
-}
+  .hero-text {
+    flex-wrap: wrap;
+    text-align: start;
+    padding-left: 2.6rem;
+  }
+
+  .hero-section .article-text {
+    padding-bottom: 3rem;
+    padding-top: 0;
+  }
+
+  .hero-section figure {
+    width: 100%;
+    max-width: 800px;
+    flex: 1;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: end;;
+  }
+  .hero-background-shape {
+    display: flex;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    aspect-ratio: 2 / 1;
+    width: 100%;
+    max-height: 50vh;
+    height: auto;
+    z-index: -1;
+    background-color: hsl(231, 74%, 50%);
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+  }
   /* ===================== */
   /* FEATURES            */
   /* ===================== */
@@ -879,44 +912,55 @@ figure {
     gap: 4rem;
   }
 
+
+ 
+  .tab-buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--tab-buttons);
+}
+
   .tabs-content-wrapper > div {
     display: none;
     margin-top: 2rem;
+    margin-left: 2rem;
   }
-
+  
   #tab1:checked ~ .tabs-content-wrapper .tab-content-tab1,
   #tab2:checked ~ .tabs-content-wrapper .tab-content-tab2,
   #tab3:checked ~ .tabs-content-wrapper .tab-content-tab3 {
-    display: flex;           /* horitzontal */
+    display: flex; /* horitzontal */
     flex-direction: row;
     align-items: center;
     gap: 4rem;
     margin-bottom: 3rem;
   }
-
+  
   .tabs-content-wrapper figure {
-    flex: 1;                 
-    margin: 0;               
+    flex: 1;
+    margin: 0;
     position: relative;
     max-width: 800px;
     z-index: 1;
   }
-
+  
   .tabs-content-wrapper figure img {
-
     height: auto;
     max-width: 800px;
     display: block;
     margin: 0 auto;
   }
-
+  
   .tabs-content-wrapper .article-text {
-    flex: 1;                 
+    flex: 1;
     margin: 0;
-    padding-left: 3rem;      
+    padding-left: 3rem;
     text-align: left;
   }
-
+  
   .features-background-shape {
     position: absolute;
     bottom: -10%;
@@ -924,18 +968,22 @@ figure {
     aspect-ratio: 2 / 1;
     height: auto;
     z-index: -1;
-    background-color: hsl(231, 74%, 50%);
+    background-color: var(--shape);
     border-top-right-radius: 200px;
     border-bottom-right-radius: 200px;
   }
-}
+  
 
   /* ===================== */
   /* DOWNLOAD              */
   /* ===================== */
   .extension-section {
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
     width: 90%;
+  }
+  .extension-card:nth-child(1) {
+    align-self: start;
+    margin-top: 0rem;
   }
 
   .extension-card:nth-child(2) {
@@ -964,6 +1012,11 @@ figure {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  .faq-item p {
+    font-size: 1.5rem;
   }
 
   .faq-arrow {
@@ -1024,27 +1077,27 @@ figure {
   }
 
   .input-wrapper {
-  position: relative; 
-  width: 100%;
-  max-width: 400px;
-}
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
 
-.error-text {
-  position: absolute;     
-  left: 0;
-  top: 100%;                
-  background-color: var(--accent-color);
-  color: white;
-  font-size: 0.875rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  margin-top: 0.25rem;  
-  display: none;
-  text-align: left;
-  width: 100%;            
-  box-sizing: border-box;
-  z-index: 2;             
-}
+  .error-text {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-top: 0.25rem;
+    display: none;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+  }
 
   /* ===================== */
   /*FOTTER                 */
@@ -1089,4 +1142,4 @@ figure {
     justify-content: start;
     flex-direction: row;
   }
-
+}
