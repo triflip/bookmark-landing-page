@@ -5,54 +5,55 @@
   border-radius: 0.5rem;
   cursor: pointer;
   border-radius: 1rem;
-  transition: background-color 0.3s ease;
+  
   width: 20%;
   padding: 1rem 0.5rem;
-  color: $bg-color;
+  color: var(--bg-color);
   text-align: center;
 }
 
-.btn-contact,
-.btn-login {
-  background-color: $accent-color;
-  color: $bg-color;
+.btn-contact {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  transition: var(--bg-color) 0.3s ease;
   text-align: center;
 }
 
-.btn-contact:hover,
-.btn-login:hover {
-  background-color: $bg-color;
-  color: $accent-color;
-  border: 2px solid $accent-color;
+.btn-contact:hover {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+.btn-info,
+.btn-chrome,
+.btn-extension {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+.btn-chrome,
+.btn-firefox {
+  width: 45%;
 }
 
 .btn-chrome:hover {
-  background-color: $bg-color;
-  color: $primary-color;
-  border: 2px solid $primary-color;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
-
-.tab-button:hover {
-  color: $accent-color;
-}
-
-.nav-links li:hover {
-  background-color: $bg-color;
-}
-.nav-links li:hover a {
-  color: $accent-color;
-}
-
-.nav-footer a:hover {
-  color: $accent-color;
-}
-
-.social a:hover img {
-  filter: $filter-color;
-}
-
-.faq-item summary:hover {
-  color: $accent-color;
+.btn-firefox {
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-extension {
@@ -60,45 +61,18 @@
   font-size: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-  background-color: $primary-color;
-  color: $bg-color;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border: 2px solid $primary-color;
+  border: 2px solid var(--primary-color);
 }
 
 .btn-extension:hover {
-  background-color: $bg-color;
-  color: $text-color;
-  border: 2px solid $primary-color;
-}
-
-.btn-info:hover {
-  background-color: $bg-color;
-  color: $text-color;
-  border: 2px solid $primary-color;
-  border-radius: 1rem;
-}
-
-.btn-chrome,
-.btn-firefox {
-  width: 45%;
-}
-
-.btn-info,
-.btn-chrome,
-.btn-extension {
-  background-color: $primary-color;
-  color: $bg-color;
-}
-
-.btn-firefox {
-  color: $text-color;
-  border: 2px solid $text-color;
-  background-color: transparent;
-  border-radius: 0.5rem;
-  cursor: pointer;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
 }
 
 .btn-info {
@@ -109,4 +83,169 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.btn-info:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+}
+
+
+.btn-contact:hover {
+  background-color: #f3f0f0;
+}
+
+.nav-links li:hover {
+  background-color: var(--bg-color);
+}
+.nav-links li:hover a {
+  color: var(--accent-color);
+}
+
+.nav-footer a:hover {
+  color: var(--accent-color);
+}
+
+.tab-button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  width: max-content;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.tab-button:hover {
+  color: var(--accent-color);
+}
+/* filter!! */
+.social a:hover img {
+  filter: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
+    hue-rotate(342deg) brightness(94%) contrast(91%);
+}
+
+.faq-item summary:hover {
+  color: var(--accent-color);
+}
+
+/* HEADERr */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vw;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.logo {
+  width: 50%;
+  height: auto;
+}
+.logo img {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+}
+
+.menu-hamburguer {
+  cursor: pointer;
+  width: 10%;
+  height: auto;
+}
+.menu-hamburguer img {
+  max-width: 190%;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.nav-header {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  gap: 2rem;
+  z-index: 1000;
+}
+
+.menu-toggle:checked ~ .nav-header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--tg-menu-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  width: 70%;
+}
+.nav-links li {
+  padding: 0.5rem;
+  border-top: 0.5px solid var(--bg-color);
+  width: 100%;
+  text-align: center;
+}
+.nav-links li:last-child {
+  border-bottom: 1px solid var(--bg-color);
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  display: block;
+  padding: 1rem 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3vw;
+}
+
+.logo-hamburguesa {
+  display: flex;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  z-index: 1100;
+}
+
+.menu-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-close img {
+  width: 3vw;
+  height: 3vw;
 }
