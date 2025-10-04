@@ -44,6 +44,7 @@ p {
   --primary-color: #5364db;
   --accent-color: #ef5f5f;
   --tg-menu-color: rgba(25, 31, 53, 0.95);
+  --tab-color: hsl(229, 8%, 60%);
 }
 /* Globals */
 .btn {
@@ -156,14 +157,6 @@ p {
   color: var(--accent-color);
 }
 
-.tab-buttons {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #cccccc;
-}
 .tab-button::after {
   content: "";
   position: absolute;
@@ -171,7 +164,7 @@ p {
   left: 100%;
   width: max-content;
   height: 3px;
-  background: hsl(0, 94%, 66%);
+  background: var(--accent-color);
   border-radius: 2px;
 }
 
@@ -422,7 +415,7 @@ p {
   left: 0;
   width: 100%;
   height: 3px;
-  background: hsl(0, 94%, 66%);
+  background: var(--accent-color);
   border-radius: 2px;
 }
 
@@ -857,7 +850,6 @@ figure {
     margin-bottom: 2rem;
     flex-wrap: wrap;
   }
-
   .hero-title {
     width: 100%;
     font-size: 2.9rem;
@@ -873,6 +865,17 @@ figure {
     text-align: start;
     padding-left: 2.6rem;
   }
+
+  .hero-section .article-text {
+    padding-bottom: 3rem;
+    padding-top: 0;
+  }
+
+  .hero-section figure {
+    width: 100%;
+    max-width: 800px;
+    flex: 1;
+  }
   
   .hero-buttons {
     display: flex;
@@ -881,20 +884,13 @@ figure {
     flex-wrap: wrap;
     justify-content: end;;
   }
-
-   .hero-section figure img {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    flex: 1;
-   }
   .hero-background-shape {
     display: flex;
     position: absolute;
-    top: 10%;
+    top: 25%;
     left: 20%;
     aspect-ratio: 2 / 1;
-    width: 130%;
+    width: 100%;
     max-height: 50vh;
     height: auto;
     z-index: -1;
@@ -913,11 +909,23 @@ figure {
     gap: 4rem;
   }
 
+
+ 
+  .tab-buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #cccccc;
+}
+
   .tabs-content-wrapper > div {
     display: none;
     margin-top: 2rem;
+    margin-left: 2rem;
   }
-
+  
   #tab1:checked ~ .tabs-content-wrapper .tab-content-tab1,
   #tab2:checked ~ .tabs-content-wrapper .tab-content-tab2,
   #tab3:checked ~ .tabs-content-wrapper .tab-content-tab3 {
@@ -927,7 +935,7 @@ figure {
     gap: 4rem;
     margin-bottom: 3rem;
   }
-
+  
   .tabs-content-wrapper figure {
     flex: 1;
     margin: 0;
@@ -935,21 +943,21 @@ figure {
     max-width: 800px;
     z-index: 1;
   }
-
+  
   .tabs-content-wrapper figure img {
     height: auto;
     max-width: 800px;
     display: block;
     margin: 0 auto;
   }
-
+  
   .tabs-content-wrapper .article-text {
     flex: 1;
     margin: 0;
     padding-left: 3rem;
     text-align: left;
   }
-
+  
   .features-background-shape {
     position: absolute;
     bottom: -10%;
@@ -961,6 +969,7 @@ figure {
     border-top-right-radius: 200px;
     border-bottom-right-radius: 200px;
   }
+  
 
   /* ===================== */
   /* DOWNLOAD              */
