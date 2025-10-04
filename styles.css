@@ -45,6 +45,11 @@ p {
   --accent-color: #ef5f5f;
   --tg-menu-color: rgba(25, 31, 53, 0.95);
   --tab-color: hsl(229, 8%, 60%);
+  --filter-color: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
+    hue-rotate(342deg) brightness(94%) contrast(91%);
+    --tab-btn-color: hsl(229, 8%, 60%);
+    --tab-buttons: #ccc;
+    --shape: hsl(231, 74%, 50%);
 }
 /* Globals */
 .btn {
@@ -143,7 +148,7 @@ p {
 
 
 .btn-contact:hover {
-  background-color: #f3f0f0;
+  background-color: var(--bg-color);
 }
 
 .nav-links li:hover {
@@ -173,8 +178,7 @@ p {
 }
 /* filter!! */
 .social a:hover img {
-  filter: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
-    hue-rotate(342deg) brightness(94%) contrast(91%);
+  filter: var(--filter-color)
 }
 
 .faq-item summary:hover {
@@ -263,7 +267,7 @@ p {
 }
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: var(--bg-color);
   font-size: 1rem;
   display: block;
   padding: 1rem 0;
@@ -352,7 +356,7 @@ p {
   max-height: 40vh;
   height: auto;
   z-index: -1;
-  background-color: hsl(231, 74%, 50%);
+  background-color: var(--shape);
   border-top-left-radius: 200px;
   border-bottom-left-radius: 200px;
 }
@@ -394,7 +398,7 @@ p {
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--tab-buttons);
 }
 
 .tab-button {
@@ -402,7 +406,7 @@ p {
   padding: 0.75rem;
   cursor: pointer;
   font-weight: 600;
-  color: hsl(229, 8%, 60%);
+  color: var(--tab-btn-color);
   position: relative;
 }
 
@@ -458,7 +462,7 @@ figure {
 .features-background-shape {
   width: 100%;
   height: 11rem;
-  background-color: hsl(231, 74%, 50%);
+  background-color: var(--shape);
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
   margin-top: -40%;
@@ -485,7 +489,7 @@ figure {
 }
 
 .extension-card {
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 12px;
   box-shadow: 9px 9px 10px 10px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -536,7 +540,7 @@ figure {
 }
 
 .faq-item {
-  background-color: white;
+  background-color: var(--bg-color);
   border-bottom: 0.2px solid var(--text-paragraph);
   margin-bottom: 1rem;
   padding: 1rem;
@@ -596,7 +600,7 @@ figure {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: hsl(231, 74%, 50%);
+  background-color:var(--shape);
   z-index: 0;
 }
 
@@ -684,7 +688,7 @@ figure {
   background-color: var(--text-color);
   padding: 2rem;
   text-align: center;
-  color: white;
+  color:var(--bg-color);
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
@@ -777,7 +781,7 @@ figure {
     left: 100%;
     width: max-content;
     height: 3px;
-    background: hsl(0, 94%, 66%);
+    background: var(--accent-color);
     border-radius: 2px;
   }
   /* ===================== */
@@ -917,7 +921,7 @@ figure {
   flex-direction: row;
   gap: 5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid var(--tab-buttons);
 }
 
   .tabs-content-wrapper > div {
@@ -965,7 +969,7 @@ figure {
     aspect-ratio: 2 / 1;
     height: auto;
     z-index: -1;
-    background-color: hsl(231, 74%, 50%);
+    background-color: var(--shape);
     border-top-right-radius: 200px;
     border-bottom-right-radius: 200px;
   }
@@ -1084,7 +1088,7 @@ figure {
     left: 0;
     top: 100%;
     background-color: var(--accent-color);
-    color: white;
+    color: var(--bg-color);
     font-size: 0.875rem;
     padding: 0.5rem 1rem;
     border-radius: 6px;
