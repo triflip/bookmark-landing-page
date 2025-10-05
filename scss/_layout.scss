@@ -893,6 +893,10 @@ figure {
     padding-top: 0;
   }
 
+  .social a:hover img {
+  filter: $filter-color
+}
+
   .nav-footer ul {
     display: flex;
     list-style: none;
