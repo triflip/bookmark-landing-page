@@ -1,18 +1,13 @@
 // ==========================================
-// Layout (Header, Main, Footer, Sections)
+// (Header, Main, Hero, Features, Download, FAQs, Subscribe, Footer, )
 // ==========================================
 
 // --- HEADER ---
-// _layouts.scss (Header corregit)
+
 .header {
   @include flex-between;
   padding: 5vw;
   @include centered-container;
-
-  .logo {
-    width: 50%;
-    img { @include responsive-img; }
-  }
 
   .menu-hamburguer {
     cursor: pointer;
@@ -24,84 +19,82 @@
     }
   }
 
-  .menu-toggle { display: none; }
+  .logo {
+    width: 40%;
+    height: auto;
 
-  // NAV ocult per defecte (mòbil)
+    img {
+      @include responsive-img;
+      padding: 0.5rem; // Mòbil
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-toggle:checked ~ .nav-header {
+    display: flex;
+    background-color: $tg-menu-color;
+  }
+
+  // NAV ocult per defecte
   .nav-header {
-    display: none;              // AMAGAT per defecte
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background-color: $bg-color;
-    @include flex-column-no-display(baseline, center, 2rem); // NO posa display
+    @include flex-column-no-display(baseline, center, 2rem); // NO posa display!
     z-index: 1000;
 
-    .logo-hamburguesa { position: absolute; top: 2rem; left: 3rem; z-index: 1100; }
-    .menu-close { position: absolute; top: 2rem; right: 3rem; cursor: pointer; z-index: 1100;
-      img { width: 3vw; height: 3vw; }
+    .logo-hamburguesa {
+      position: absolute;
+      top: 2rem;
+      left: 3rem;
+      z-index: 1100;
+    }
+    .menu-close {
+      position: absolute;
+      top: 2rem;
+      right: 3rem;
+      cursor: pointer;
+      z-index: 1100;
+      img {
+        width: 3vw;
+        height: 3vw;
+      }
     }
 
     .nav-links {
-      list-style: none;
-      width: 70%;
       margin: 0;
-      padding: 0;
-      text-align: center;
+      list-style: none;
+      display: flex;
 
       li {
         padding: 0.5rem;
         border-top: 0.5px solid $bg-color;
         a {
           text-decoration: none;
-          color: $bg-color;
+          color: $text-color;
           display: block;
           padding: 1rem 0;
         }
-        &:hover { background-color: $bg-color;
-          a { color: $accent-color; }
+        &:hover {
+          background-color: $bg-color;
+          a {
+            color: $accent-color;
+          }
         }
       }
     }
 
-    .social-icons { display:flex; gap:2rem; margin-top:3vw; }
-  }
-
-  // Quan el checkbox està checked MOSTRAR el nav (mòbil)
-  .menu-toggle:checked ~ .nav-header {
-    display: flex;                             // ara sí es mostra
-    background-color: $tg-menu-color;    // color fons menú o $tg-menu-color
-    @include flex-column(baseline, center, 2rem); // aquí sí incloem display
-  }
-
-  // Desktop: ocultem icones mòbil i mostrem nav en horitzontal
-  @media (min-width: $bp-desktop) {
-    padding: 3vw;
-
-    .menu-hamburguer,
-    .menu-close,
-    .logo-hamburguesa,
-    .social-icons { display: none; }
-
-    .nav-header {
-      display: flex;          // visible per defecte en desktop
-      position: static;
-      height: auto;
-      width: auto;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      background-color: transparent;
-
-      .nav-links {
-        display: flex;
-        gap: 0.5rem;
-        width: auto;
-        margin: 0;
-        li { border: none; padding: 0; }
-        a { color: $text-color; font-size: clamp(0.5rem, 2vw, 1rem); }
-      }
+    .social-icons {
+      display: flex;
+      gap: 2rem;
+      margin-top: 3vw;
     }
   }
 }
@@ -137,7 +130,7 @@
 }
 .hero-title {
   font-size: clamp(1.5rem, 5vw, 2.25rem);
-  color: var(--text-color);
+  color: $text-color;
 }
 .hero-text {
   padding-left: 2rem;
@@ -154,7 +147,7 @@
   max-height: 40vh;
   height: auto;
   z-index: -1;
-  background-color: var(--shape);
+  background-color: $shape-background;
   border-top-left-radius: 200px;
   border-bottom-left-radius: 200px;
 }
@@ -196,7 +189,7 @@
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid var(--tab-buttons);
+  border-bottom: 1px solid $tab-buttons;
 }
 
 .tab-button {
@@ -204,7 +197,7 @@
   padding: 0.75rem;
   cursor: pointer;
   font-weight: 600;
-  color: var(--tab-color);
+  color: $tab-color;
   position: relative;
 }
 
@@ -217,7 +210,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: var(--accent-color);
+  background: $accent-color;
   border-radius: 2px;
 }
 
@@ -260,7 +253,7 @@ figure {
 .features-background-shape {
   width: 100%;
   height: 11rem;
-  background-color: var(--shape);
+  background-color: $shape-background;
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
   margin-top: -40%;
@@ -272,7 +265,6 @@ figure {
 /* ===================== */
 #download-section {
   align-items: center;
-
   text-align: center;
 }
 
@@ -281,15 +273,15 @@ figure {
   width: 70%;
   margin: 2rem auto;
   gap: 2.5rem;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .extension-card {
-  background-color: var(--bg-color);
+  background-color: $bg-color;
   border-radius: 12px;
-  box-shadow: 9px 9px 10px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 9px 9px 10px 10px $shadow-color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -312,12 +304,12 @@ figure {
 .extension-card h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: var(--text-color);
+  color: $text-color;
 }
 
 .extension-card p {
   font-size: 0.9rem;
-  color: var(--text-paragraph);
+  color: $text-paragraph;
 }
 .dots {
   width: 100%;
@@ -338,8 +330,8 @@ figure {
 }
 
 .faq-item {
-  background-color: var(--bg-color);
-  border-bottom: 0.2px solid var(--text-paragraph);
+  background-color: $bg-color;
+  border-bottom: 0.2px solid $text-paragraph;
   margin-bottom: 1rem;
   padding: 1rem;
   text-align: left;
@@ -359,7 +351,7 @@ figure {
 .faq-item p {
   margin-top: 1rem;
   font-size: 1.25rem;
-  color: var(--text-paragraph);
+  color: $text-paragraph;
   line-height: 1.5;
 }
 .faq-arrow {
@@ -373,7 +365,7 @@ figure {
 .faq-item[open] .faq-arrow {
   transform: rotate(180deg);
   filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg)
-  brightness(92%) contrast(91%);
+    brightness(92%) contrast(91%);
 }
 
 /* ===================== */
@@ -385,11 +377,11 @@ figure {
   overflow: hidden;
 }
 #subscribe h2 {
-  color: var(--bg-color);
+  color: $bg-color;
 }
 
 #subscribe p {
-  color: var(--bg-color);
+  color: $bg-color;
 }
 
 .subscribe-background-shape {
@@ -398,7 +390,7 @@ figure {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:var(--shape);
+  background-color: $shape-background;
   z-index: 0;
 }
 
@@ -435,7 +427,7 @@ figure {
 }
 
 .contact-form input[type="email"]:invalid {
-  border: 2px solid var(--accent-color);
+  border: 2px solid $accent-color;
 }
 
 .error-icon {
@@ -449,7 +441,7 @@ figure {
 }
 
 .invalid {
-  border: 2px solid var(--accent-color);
+  border: 2px solid $accent-color;
 }
 .error-icon,
 .error-text {
@@ -457,8 +449,8 @@ figure {
 }
 
 .error-text {
-  background-color: var(--accent-color);
-  color: var(--bg-color);
+  background-color: $accent-color;
+  color: $bg-color;
   font-size: 0.875rem;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -467,19 +459,9 @@ figure {
   text-align: left;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-// --- FOOTER ---
+/* ===================== */
+/* FOTTER  */
+/* ===================== */
 .footer {
   background-color: $text-color;
   padding: 2rem;
@@ -489,239 +471,398 @@ figure {
   align-items: center;
   max-width: 100%;
   margin: 0 auto;
-
-  .nav-footer ul {
-    @include flex-column(center, center, 2rem);
-  }
-
-  .nav-footer a {
-    text-decoration: none;
-    color: $bg-color;
-    font-weight: 500;
-    transition: opacity 0.3s ease;
-    
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-  .especial-logo,
-  .social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .especial-logo {
-    margin-bottom: 2rem;
-  }
-
-  .social {
-    gap: 2.5rem;
-    margin-top: 1.5rem;
-    
-    a {
-      display: inline-block;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-      margin-top: 1rem;
-
-      &:hover {
-        transform: scale(1.1);
-        opacity: 0.8;
-      }
-    }
-    img {
-      width: 24px;
-      height: 24px;
-    }
-  }
+}
+.nav-footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-direction: column;
 }
 
-// --- MAIN (Mobile First) ---
-.main {
-  width: 100%;
-  @include flex-column(flex-start, stretch, 3rem);
-  padding-bottom: 0;
+.nav-footer a {
+  text-decoration: none;
+  color: $bg-color;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
 }
 
-// ... Continua amb els estils de les seccions (hero-section, features, etc.) de Mòbil aquí ...
-/* scss/_layout.scss (continuació) */
+.nav-footer a:hover {
+  opacity: 0.7;
+}
 
-// ==========================================
-// MEDIA QUERIES: DESKTOP
-// ==========================================
+.especial-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer.social {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+.social a {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-top: 1rem;
+}
+
+.social a:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===================== */
+/* MEDIA QUERIES: DESKTOP */
+/* ===================== */
 @media (min-width: $bp-desktop) {
-
-  // --- HEADER ---
+  /* ===================== */
+  /* HEADER              */
+  /* ===================== */
   .header {
     flex-direction: row;
-    padding-top: 1rem;
-    
-    // Amagar elements de mòbil
-    .menu-toggle,
-    .menu-hamburguer {
-      display: none;
-    }
-
-    .logo {
-      margin: 1rem;
-      flex: 1;
-      img {
-        width: 60%;
-        padding: 0;
-      }
-    }
+    padding: 2rem 2rem;
   }
-  
-  // --- NAV HEADER (El menú de desktop) ---
-  .nav-header {
-    display: flex; // MOSTRA el menú
-    position: static; // Treu el fixed/absolute
-    height: auto;
-    width: auto;
-    flex-direction: row;
-    align-items: center;
-    flex: 2;
-    min-width: 0;
 
-    // Amagar elements de mòbil dins del nav
-    .logo-hamburguesa,
-    .menu-close,
-    .social-icons {
-      display: none;
-    }
+  .menu-hamburguer,
+  .menu-close,
+  .logo-hamburguesa,
+  .social-icons {
+    display: none !important;
+  }
+
+  .header .nav-header {
+    display: flex;
+    position: static;
+    height: auto;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
     .nav-links {
       display: flex;
-      gap: 0.5rem;
-      flex-direction: row;
-      width: auto;
-      flex: 1;
-
+      gap: 1rem;
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
       li {
         border: none;
         padding: 0;
-        flex: 1;
-        a {
-          color: $text-color; // Color de desktop
-          font-size: clamp(0.5rem, 2vw, 1rem);
-          justify-content: center;
-        }
+      }
+      a {
+        color: $text-color;
+        font-size: clamp(0.5rem, 2vw, 1rem);
       }
     }
   }
 
-  // Hero Section
+  .header .logo {
+    width: 20%;
+
+    img {
+      @include responsive-img;
+      padding: 0.5rem;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  /* ===================== */
+  /* HERO             */
+  /* ===================== */
+
   .hero-section {
+    display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 4rem 8rem;
-    gap: 2rem;
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; 
+  }
+  .hero-title {
+    width: 100%;
+    font-size: 2.9rem;
+    text-align: start;
+    padding: 1rem;
+    padding-left: 0.5rem;
+    z-index: 1;
+    flex-wrap: wrap;
+  }
 
-    .hero-text {
-      flex: 1;
-      text-align: left;
-
-      h1 {
-        font-size: 3.5rem;
-      }
-
-      p {
-        font-size: 1.75rem;
-      }
-    }
-
-    .hero-image {
-      flex: 1;
-      img {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-      }
-    }
-  }         
-
-  // Features 
-  .features {
-    padding: 4rem 8rem;
-    gap: 4rem;
-
-    .feature-item {
-      flex: 1;
-      text-align: left;
-
-      h3 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1.25rem;
-      }
-    }
-  }       
-
-  // Download Section
-  .download-section {   
-    padding: 4rem 8rem;
-    gap: 2rem;
-
-    h2 {
-      font-size: 2.5rem;
-    }
-
-    p {
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 0 auto 2rem auto;
-    }
-
-    .download-buttons {
-      flex-direction: row;
-      gap: 2rem;
-
-      .btn-download {
-        width: auto;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-      }
-    }
-  }                       
-
-  // Subscribe Section
-  .subscribe-section {                                                                                                                                          
-    padding: 4rem 8rem;
-    gap: 2rem;
-
-    h2 {
-      font-size: 2.5rem;
-    }
-
-    p {
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 0 auto 2rem auto;
-    }
-
-    form {
-      flex-direction: row;
-      gap: 1rem;
-      max-width: 600px;
-      margin: 0 auto;
-
-      input[type="email"] {
-        flex: 1;
-        font-size: 1rem;
-        padding: 1rem;
-      }
-
-      button {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-      }
-    }
-  } 
+  .hero-text {
+    flex-wrap: wrap;
+    text-align: start;
+    padding-left: 3rem;
+  }
   
+  .hero-section .article-text {
+    text-align: left;
+  }
+  
+  .hero-section p {
+    padding-left: 3rem;
+  }
+  
+  .hero-section figure {
+    width: 80%;
+    max-width: 800px;
+    flex: 1;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    width: 95%;
+    flex-wrap: wrap;
+    justify-content: end;
+    
+  }
+  .hero-section img {
+    padding: 2rem;
+    }
+
+  .hero-background-shape {
+    display: flex;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    aspect-ratio: 2 / 1;
+    width: 90%;
+    max-height: 50vh;
+    height: auto;
+    z-index: -1;
+    background-color: $shape-background;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+  }
+  /* ===================== */
+  /* FEATURES            */
+  /* ===================== */
+
+  .features {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $tab-buttons;
+  }
+
+  .tab-button:hover {
+    color: $accent-color;
+  }
+  
+  .tab-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    width: max-content;
+    height: 3px;
+    background: $accent-color;
+    border-radius: 2px;
+  }
+
+  .tabs-content-wrapper > div {
+    display: none;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  #tab1:checked ~ .tabs-content-wrapper .tab-content-tab1,
+  #tab2:checked ~ .tabs-content-wrapper .tab-content-tab2,
+  #tab3:checked ~ .tabs-content-wrapper .tab-content-tab3 {
+    display: flex; /* horitzontal */
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .tabs-content-wrapper figure {
+    flex: 1;
+    margin: 0;
+    position: relative;
+    max-width: 800px;
+    z-index: 1;
+  }
+
+  .tabs-content-wrapper figure img {
+    height: auto;
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .tabs-content-wrapper .article-text {
+    flex: 1;
+    margin: 0;
+    padding-left: 3rem;
+    text-align: left;
+  }
+
+  .features-background-shape {
+    position: absolute;
+    bottom: -10%;
+    width: 80%;
+    aspect-ratio: 2 / 1;
+    height: auto;
+    z-index: -1;
+    background-color: $shape-background;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+  }
+
+  /* ===================== */
+  /* DOWNLOAD              */
+  /* ===================== */
+  .extension-section {
+    flex-direction: row;
+    width: 90%;
+  }
+  .extension-card:nth-child(1) {
+    align-self: start;
+    margin-top: 0rem;
+  }
+
+  .extension-card:nth-child(2) {
+    align-self: start;
+    margin-top: 2rem;
+  }
+
+  .extension-card:nth-child(3) {
+    align-self: start;
+    margin-top: 4rem;
+  }
+
+  /* ===================== */
+  /* FAQS           */
+  /* ===================== */
+  #faqs {
+    padding: 2rem 4rem;
+  }
+
+  .faq-item {
+    padding: 2rem;
+  }
+
+  .faq-item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  .faq-item p {
+    font-size: 1.5rem;
+  }
+
+  .faq-arrow {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: invert(29%) sepia(94%) saturate(747%) hue-rotate(191deg)
+      brightness(94%) contrast(92%); /* blau */
+  }
+
+  .faq-item[open] .faq-arrow {
+    transform: rotate(180deg);
+    filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg)
+      brightness(92%) contrast(91%); /* vermell */
+  }
+
+  /* ===================== */
+  /* SUBSCRIBE              */
+  /* ===================== */
+  #subscribe {
+    padding-block: 6rem;
+  }
+
+  .subscribe-container {
+    max-width: 600px;
+  }
+
+  .invalid {
+    border: 2px solid var(--accent-color);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    padding: 0;
+  }
+
+  .input-wrapper {
+    flex: 3;
+    padding: 0;
+  }
+
+  .btn-contact {
+    flex: 1;
+    align-self: flex-start;
+  }
+
+  .subscribe-shape {
+    width: 100%;
+    margin-left: -2vw;
+    height: 6rem;
+    background-color: hsl(231, 74%, 50%);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    margin-bottom: -3rem;
+  }
+
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .error-text {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: $accent-color;
+    color: var(--bg-color);
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-top: 0.25rem;
+    display: none;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  /* ===================== */
+  /*FOTTER                 */
+  /* ===================== */
   .footer {
     display: flex;
     justify-content: space-between;
@@ -729,26 +870,37 @@ figure {
     padding: 1rem 4rem;
     flex-wrap: wrap;
     gap: 2rem;
+  }
 
-    .nav-footer ul {
-      flex-direction: row;
-      margin-left: 2rem;
-      gap: 2rem;
-      justify-content: flex-start;
-    }
+  .especial-logo,
+  .nav-footer {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
 
-    .especial-logo,
-    .nav-footer {
-      margin-bottom: 0;
-    }
+  .social {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+    margin-top: 0;
+  }
 
-    .social {
-      margin-left: auto;
-      margin-top: 0;
-      a {
-        margin-top: 0;
-        padding-top: 0;
-      }
-    }
+  .social a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .nav-footer ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 2rem;
+    gap: 2rem;
+    justify-content: start;
+    flex-direction: row;
   }
 }

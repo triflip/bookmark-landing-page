@@ -9,9 +9,11 @@ $text-paragraph: hsl(240, 1%, 47%);
 $primary-color: #5364db;
 $accent-color: #ef5f5f;
 $tg-menu-color: rgba(25, 31, 53, 0.95);
-$blue-background: hsl(231, 74%, 50%); // Per a les formes de fons
-$gray-light: #cccccc; // Color de la línia de la pestanya
-$gray-hover: hsl(229, 8%, 60%); // Color de text de les pestanyes
+$shape-background: hsl(231, 74%, 50%);
+$tab-buttons: #cccccc; // Línia de la pestanya
+$tab-color: hsl(240, 1%, 47%); // Text de les pestanyes
+$shadow-color: rgba(0, 0, 0, 0.1); 
+$transparent: transparent;
 
 // Tipografia
 $font-base: "Rubik", sans-serif;
