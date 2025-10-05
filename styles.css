@@ -108,6 +108,11 @@ p {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+.btn-firefox:hover {
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
 
 .btn-extension {
   width: 80%;
@@ -251,7 +256,7 @@ p {
 .nav-links {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 2rem;
   text-align: center;
   width: 70%;
 }
@@ -275,10 +280,18 @@ p {
   transition: background-color 0.3s ease;
 }
 
+.btn-login {
+  width: 70%;
+  background-color: transparent;
+  border: 1px solid var(--bg-color);
+  border-radius: 0.4rem;
+  margin-bottom: 7rem;
+}
+
 .social-icons {
   display: flex;
   gap: 2rem;
-  margin-top: 3vw;
+  margin-bottom: vw;
 }
 
 .logo-hamburguesa {
@@ -816,6 +829,7 @@ figure {
   .nav-links {
     display: flex;
     gap: 0.5rem;
+    margin-top: 0;
     list-style: none;
     width: auto;
     min-width: 0;
@@ -839,6 +853,9 @@ figure {
     justify-content: center;
   }
 
+  .btn-login {
+    margin-bottom: 0;
+  }
   /* ===================== */
   /* HERO             */
   /* ===================== */
