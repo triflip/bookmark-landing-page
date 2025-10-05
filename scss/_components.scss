@@ -2,15 +2,13 @@
 // Components (Buttons, Logo, Cards, FAQ, etc.)
 // ==========================================
 
-
 .btn {
   display: inline-block;
   font-size: 1rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 20%;
   padding: 1rem 0.5rem;
   color: $bg-color;
   text-align: center;
@@ -26,7 +24,9 @@
   color: $bg-color;
   border: none;
   text-align: center;
-  
+    border: 1px solid $accent-color;
+
+
   &:hover {
     background-color: $bg-color;
     color: $accent-color;
@@ -34,22 +34,7 @@
   }
 }
 
- .btn-login {
-    width: 20%;
-    font-size: 1rem;
-    border-radius: 8px;
-    background-color: $accent-color;
-    color: $bg-color;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-  }
 
-  .btn-login:hover {
-    background-color: $bg-color;
-    color: $accent-color;
-    border: 2px solid $accent-color;
-  }
 
 .btn-info,
 .btn-chrome,
@@ -75,6 +60,12 @@
   background-color: transparent;
   border-radius: 0.5rem;
   cursor: pointer;
+  &:hover {
+    background-color: $bg-color;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    border-radius: 0.5rem;
+  }
 }
 
 .btn-extension {
@@ -91,23 +82,29 @@
 }
 
 .btn-info {
-  width: 60%;
-  max-width: 300px;
+  width: 40%;
   white-space: nowrap;
   padding: 1rem;
   display: block;
   margin: 0 auto;
+  border: 2px solid $primary-color;
+  text-align: center;
 
   &:hover {
     background-color: $bg-color;
     color: $text-color;
     border: 2px solid $primary-color;
-    border-radius: 1rem;
   }
 }
 
+@media (min-width: $bp-desktop) {
+  .btn-info {
+    width: auto;
+    padding: 1rem 2rem;
+  }
+}
 
-//  FAQ 
+//  FAQ
 .faq-item {
   background-color: white;
   border-bottom: 0.2px solid $text-paragraph;
@@ -119,7 +116,7 @@
   summary {
     @include flex-between;
     font-weight: 600;
-    font-size: 1.30rem;
+    font-size: 1.3rem;
     cursor: pointer;
     padding-right: 0;
 
@@ -137,7 +134,8 @@
 
   &[open] .faq-arrow {
     transform: rotate(180deg);
-    filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg) brightness(92%) contrast(91%); /* vermell */
+    filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg)
+      brightness(92%) contrast(91%); /* vermell */
   }
 }
 
@@ -145,12 +143,13 @@
   width: 1rem;
   height: 1rem;
   transition: transform 0.3s ease, filter 0.3s ease;
-  filter: invert(29%) sepia(94%) saturate(747%) hue-rotate(191deg) brightness(94%) contrast(92%); /* blau */
+  filter: invert(29%) sepia(94%) saturate(747%) hue-rotate(191deg)
+    brightness(94%) contrast(92%); /* blau */
 }
 
-//  Extension Card 
+//  Extension Card
 .extension-card {
-  background-color: white;
+  background-color: $bg-color;
   border-radius: 12px;
   @include card-shadow;
   @include flex-column(space-between, center, 1rem);

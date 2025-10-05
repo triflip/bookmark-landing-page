@@ -69,33 +69,53 @@
     }
 
     .nav-links {
-      margin: 0;
+      padding-top: 30%;
       list-style: none;
-      display: flex;
+      right: 10%;
+      width: 130%;
+      text-align: center;
+      
+    }
+    .nav-links li {
+      padding: 0.5rem;
+      border-top: solid 0.1px $bg-color;
+      text-align: center;    
+      margin-left: 10% ;
+      margin-right: 20% ;  
 
-      li {
-        padding: 0.5rem;
-        border-top: 0.5px solid $bg-color;
+      a {
+        text-decoration: none;
+        color: $bg-color;
+        display: block;
+        padding: 1rem; 
+        width: 100%;
+      }
+      &:hover {
+        background-color: $bg-color;
         a {
-          text-decoration: none;
-          color: $text-color;
-          display: block;
-          padding: 1rem 0;
-        }
-        &:hover {
-          background-color: $bg-color;
-          a {
-            color: $accent-color;
-          }
+          color: $accent-color !important;
         }
       }
     }
+       .nav-links li:last-child {
+  border-bottom: 1px solid $bg-color;
+  
+}
+  }
 
+  .btn-login {
+    background-color: $transparent;
+    border: 1px solid $bg-color;
+    font-size: 1.215rem;
+    padding: 0.50rem 7rem;
+    border-radius: 0.2rem;
+  }
     .social-icons {
       display: flex;
-      gap: 2rem;
       margin-top: 3vw;
-    }
+      gap: 1.5rem;
+      margin-top: 40%;
+    
   }
 }
 .main {
@@ -491,7 +511,7 @@ figure {
 }
 
 .nav-footer a:hover {
-  opacity: 0.7;
+  color: $accent-color;
 }
 
 .especial-logo {
@@ -501,7 +521,7 @@ figure {
   margin-bottom: 2rem;
 }
 
-.footer.social {
+.social {
   display: flex;
   justify-content: center;
   gap: 2.5rem;
@@ -533,7 +553,7 @@ figure {
   /* ===================== */
   .header {
     flex-direction: row;
-    padding: 2rem 2rem;
+    padding: 2rem 3rem;
   }
 
   .menu-hamburguer,
@@ -551,22 +571,45 @@ figure {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background-color: $bg-color !important;
 
     .nav-links {
       display: flex;
       gap: 1rem;
+      padding: 0;
       justify-content: space-between;
       width: 100%;
       margin: 0;
       li {
         border: none;
-        padding: 0;
+        margin: 0!important;
       }
       a {
-        color: $text-color;
+        padding-right: 0 !important;
+        color: $text-color !important;
         font-size: clamp(0.5rem, 2vw, 1rem);
       }
     }
+  }
+
+  .btn-login {
+    width: 20%;
+    font-size: 1rem;
+    border-radius: 8px !important;
+    background-color: $accent-color !important;
+    color: $bg-color;
+    border: none;
+    cursor: pointer;
+    padding: 0.7rem !important;
+    text-align: center;
+    border: 1px solid $accent-color !important;
+  }
+
+  .btn-login:hover {
+    background-color: $bg-color !important;
+    border: 1px solid $accent-color !important;
+    color: $accent-color;
+    
   }
 
   .header .logo {
@@ -592,7 +635,7 @@ figure {
     position: relative;
     overflow: hidden;
     margin-bottom: 2rem;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
   .hero-title {
     width: 100%;
@@ -609,15 +652,15 @@ figure {
     text-align: start;
     padding-left: 3rem;
   }
-  
+
   .hero-section .article-text {
     text-align: left;
   }
-  
+
   .hero-section p {
     padding-left: 3rem;
   }
-  
+
   .hero-section figure {
     width: 80%;
     max-width: 800px;
@@ -630,11 +673,10 @@ figure {
     width: 95%;
     flex-wrap: wrap;
     justify-content: end;
-    
   }
   .hero-section img {
     padding: 2rem;
-    }
+  }
 
   .hero-background-shape {
     display: flex;
@@ -673,7 +715,7 @@ figure {
   .tab-button:hover {
     color: $accent-color;
   }
-  
+
   .tab-button::after {
     content: "";
     position: absolute;
@@ -700,7 +742,7 @@ figure {
     gap: 4rem;
     margin-bottom: 3rem;
   }
-
+  
   .tabs-content-wrapper figure {
     flex: 1;
     margin: 0;
@@ -708,20 +750,22 @@ figure {
     max-width: 800px;
     z-index: 1;
   }
-
+  
   .tabs-content-wrapper figure img {
     height: auto;
     max-width: 800px;
     display: block;
     margin: 0 auto;
   }
-
+  
   .tabs-content-wrapper .article-text {
     flex: 1;
     margin: 0;
     padding-left: 3rem;
     text-align: left;
   }
+
+  
 
   .features-background-shape {
     position: absolute;
@@ -894,8 +938,8 @@ figure {
   }
 
   .social a:hover img {
-  filter: $filter-color
-}
+    filter: $filter-color;
+  }
 
   .nav-footer ul {
     display: flex;
