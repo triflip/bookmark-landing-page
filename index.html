@@ -4,37 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="src/output.css">
     <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
-    <!-- per importar tipografia Rubic externa -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <title>Bookmart-landing-page</title>
 </head>
 
-<body>
-    <header class="header">
-        <h1 class="logo">
+<body class="font-['Rubik'] text-gray-700">
+    <header class="flex items-center justify-between p-9 max-w-7xl mx-auto bg-tab-custom" aria-label="Main header">
+        <h1 class="mt-12 mb-6">
             <img src="assets/images/logo-bookmark.svg" alt="Bookmark logo">
         </h1>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="menu-hamburguer" aria-label="Open menu">
+
+        <input type="checkbox" id="menu-toggle" class="peer hidden" aria-label="Menu toggle">
+        <label for="menu-toggle" class="cursor-pointer z-50" aria-label="Open menu">
             <img src="assets/images/icon-hamburger.svg" alt="Menu icon">
         </label>
 
-        <nav class="nav-header">
-            <!-- Botó de tancament -->
-            <label for="menu-toggle" class="menu-close" aria-label="Close menu">
+        <nav class=" hidden peer-checked:flex peer-checked:flex-col peer-checked:items-center peer-checked:justify-start peer-checked:pt-24 peer-checked:gap-6 peer-checked:bg-indigo-950/90 text-white peer-checked:fixed peer-checked:top-0 peer-checked:left-0 peer-checked:w-full peer-checked:h-screen z-40"
+            aria-label="Primary navigation">
+            <label for="menu-toggle" class="absolute top-6 right-6 cursor-pointer z-50" aria-label="Close menu">
                 <img src="assets/images/icon-close.svg" alt="Close icon">
             </label>
-            <div class="logo-hamburguesa"><img src="assets/images/logo-bookmark-footer.svg" alt="Bookmark logo"></div>
+            <div class="absolute top-6 left-6"><img src="assets/images/logo-bookmark-menu.svg" alt="Bookmark logo">
+            </div>
 
-            <ul class="nav-links">
-                <li><a href="#features">FEATURES</a></li> <!--enllaç intern-->
-                <li><a href="#" aria-disabled="true" style="pointer-events: none;">PRICING</a></li>
-                <li><a href="#subscribe">CONTACT</a></li>
+            <ul class="flex flex-col items-center w-full px-6 text-white text-lg font-medium gap-4">
+                <li class="w-full flex flex-col items-center">
+                    <div class="w-3/4 h-px bg-white opacity-30 mb-2"></div>
+                    <a href="#features" class="hover:text-red-600 transition-colors duration-300">FEATURES</a>
+                </li>
+
+                <li class="w-full flex flex-col items-center">
+                    <div class="w-3/4 h-px bg-white opacity-30 mb-2"></div>
+                    <a href="#" class="hover:text-red-600 transition-colors duration-300">PRICING</a>
+                </li>
+
+                <li class="w-full flex flex-col items-center">
+                    <div class="w-3/4 h-px bg-white opacity-30 mb-2"></div>
+                    <a href="#subscribe" class="hover:text-red-600 transition-colors duration-300">CONTACT</a>
+                    <div class="w-3/4 h-px bg-white opacity-30 mt-2"></div>
+                </li>
             </ul>
-            <button class="btn btn-login" aria-label="Login">Login</button>
-            <div class="social-icons">
+
+
+
+            <button
+                class="bg-transparent text-white border border-white  hover:text-red-600 hover:border-red-600 duration-300 px-20 py-2 rounded-lg md:bg-red-600 md:text-white md:border-transparent md:hover:bg-white md:hover:text-red-600 md:hover:border-red-600 transition">Login</button>
+            <div class="mt-auto mb-12 flex gap-6">
                 <a href="#" aria-label="Facebook">
                     <img src="assets/images/icon-facebook.svg" alt="Facebook icon">
                 </a>
@@ -45,11 +62,12 @@
         </nav>
     </header>
 
-    <main class="main">
+    <main class="p-9">
 
         <!-- HERO SECTION -->
-        <section class="hero-section" aria-label="Hero section">
-            <article class="article-text">
+
+        <section class="flex flex-col-reverse" aria-label="Hero section">
+            <article class="flex flex-col items-center text-center ">
                 <h2 class="hero-title">A Simple Bookmark Manager</h2>
                 <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your
                     sites load instantly. Try it for free.</p>
@@ -84,7 +102,6 @@
                         <label for="tab3" class="tab-button" role="tab">Easy Sharing</label>
                     </div>
 
-                    <!-- Contingut pestanyes -->
                     <div class="tabs-content-wrapper">
                         <div class="tab-content-tab1" role="tabpanel">
                             <figure>
@@ -187,7 +204,7 @@
             <details class="faq-item">
                 <summary>
                     What is Bookmark?
-                    <img src="assets/images/icon-arrow.svg" class="faq-arrow" alt="arrow" >
+                    <img src="assets/images/icon-arrow.svg" class="faq-arrow" alt="arrow">
                 </summary>
                 <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
             </details>

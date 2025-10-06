@@ -40,16 +40,16 @@ p {
   --bg-color: #fdfdfd;
   --text-color: #262c40;
   --text-paragraph: hsl(240, 1%, 47%);
-  --font-base: "Rubik", sans-serif;
   --primary-color: #5364db;
   --accent-color: #ef5f5f;
   --tg-menu-color: rgba(25, 31, 53, 0.95);
-  --filter-color: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
-  hue-rotate(342deg) brightness(94%) contrast(91%);
   --tab-color: hsl(229, 8%, 60%);
   --tab-buttons: #ccc;
   --shape: hsl(231, 74%, 50%);
   
+  --font-base: "Rubik", sans-serif;
+  --filter-color: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
+  hue-rotate(342deg) brightness(94%) contrast(91%);
 }
 /* Globals */
 .btn {
