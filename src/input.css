@@ -2,11 +2,7 @@
 @import "tailwindcss/theme";
 @import "tailwindcss/utilities";
 
-@import "tailwindcss/preflight";
-@import "tailwindcss/theme";
-@import "tailwindcss/utilities";
-
-/* === BOTONS GLOBALS === */
+/* Botons globals  */
 
 .btn {
   @apply inline-block text-sm rounded-md cursor-pointer w-1/5 py-3 px-2 text-center font-medium transition-colors;
