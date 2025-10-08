@@ -1,3 +1,6 @@
+/* Validació del email */ 
+
+
 document.querySelector(".contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -16,7 +19,6 @@ document.querySelector(".contact-form").addEventListener("submit", function (e) 
     emailInput.classList.remove("invalid");
     errorIcon.style.display = "none";
     errorText.style.display = "none";
-    // Puc afegir nissatge d'èxit
   }
 });
 
