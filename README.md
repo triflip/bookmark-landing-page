@@ -1,4 +1,10 @@
+
 # Iteración 3 – TailwindCSS (Versión final)
+=======
+
+
+# Iteración 3 – TailwindCSS 
+
 
 Landing page final con **TailwindCSS**: rápida, responsive y limpia.
 
@@ -8,6 +14,7 @@ Landing page final con **TailwindCSS**: rápida, responsive y limpia.
 
 1️⃣ **Clonar el repositorio**
 ```bash
+
 git clone https://github.com/triflip/bookmark-landing-page/tree/feature/tailwind-implementation
 cd bookmark-landing-page
 git checkout feature/tailwind
@@ -15,6 +22,13 @@ git checkout feature/tailwind
 
 2️⃣ **Instalar dependencias**
 ```bash
+=======
+git clone (https://github.com/triflip/bookmark-landing-page/feature/talwind-implementation)
+cd bookmark-landing-page
+git checkout -b feature/tailwind
+2️⃣ Instalar dependencias
+bash
+>>>>>>> fa03082 (Readme millorat)
 npm install
 ```
 
