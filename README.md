@@ -1,108 +1,39 @@
 
-🧱 Iteración 3 – Optimización visual y modularización avanzada
+# Iteración 3 – TailwindCSS (Versión final)
 
-Con la estructura SCSS ya implementada, esta fase se centra en pulir los detalles visuales, modularizar componentes y mejorar la experiencia de usuario. El objetivo es que el proyecto respire armonía visual y sea fácil de mantener.
-
-
-🎯 Objetivos de Aprendizaje
-Separar componentes en bloques SCSS independientes.
-
-Refinar proporciones, espaciados y alineaciones.
-
-Validar el diseño en múltiples resoluciones.
-
-Aplicar transiciones y animaciones suaves.
-
-Consolidar el sistema de diseño visual.
+Landing page final con **TailwindCSS**: rápida, responsive y limpia.
 
 ---
 
-🧰 Herramientas y Tecnologías
-SASS (SCSS) → modularización avanzada.
+## 🚀 Cómo usar este proyecto
 
-VS Code → edición y validación visual.
-
-Git + GitHub → control de versiones.
-
-Live Server / navegador → testeo visual.
-
-Herramientas de accesibilidad → Lighthouse, Wave.
-
-🚀 Pasos para Ejecutar la Iteración:
-
-1️⃣ Crear nueva rama para la optimización
+1️⃣ **Clonar el repositorio**
+```bash
+git clone [<URL-de-tu-repo>](https://github.com/triflip/bookmark-landing-page/edit/feature/vanilla-implementation)
+cd bookmark-landing-page
+git checkout feature/tailwind
+2️⃣ Instalar dependencias
 bash
-git checkout -b feature/final-polish
-2️⃣ Modularizar componentes
-Separar botones, formularios, menús, etc. en parciales.
-
-Aplicar mixins y placeholders para estilos repetidos.
-
-Validar cada componente en móvil, tablet y escritorio.
-
-3️⃣ Refinar layout y diseño
-Ajustar proporciones y espaciados.
-
-Revisar sistema de grid/flex aplicado.
-
-Añadir transiciones suaves donde aporten valor.
-
-♿ Accesibilidad (WCAG)
-Revisar el orden de tabulación.
-
-Confirmar feedback visual en elementos interactivos.
-
-Validar que los cambios visuales no afectan la accesibilidad.
-
----
-
-💡 Buenas Prácticas
-Separar lógica visual por componente.
-
-Usar mixins con argumentos para layouts flexibles.
-
-Validar cada sección en móvil, tablet y escritorio.
-
-Commits frecuentes y descriptivos:
-
+npm install
+3️⃣ Iniciar Tailwind
 bash
-feat: modulariza sección FAQ y botones
-style: mejora proporciones y espaciado en hero
-fix: corrige alineación en layout de extensiones
-🌐 Despliegue en GitHub Pages
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+4️⃣ Abrir el proyecto
+
+Usa Live Server o abre index.html directamente.
+---
+🧩 Qué incluye
+Tailwind configurado (tailwind.config.js)
+
+Clases utilitarias para layout y diseño
+
+Mobile First
+
+Accesibilidad revisada
+----
+💡 Buenas prácticas Git
 bash
-git checkout main
-git merge feature/final-polish
-git push origin main
-
----
-
-✅ Checklist Final
-[x] Componentes modularizados
-
-[x] Layout ajustado a la replica ya que en muchas fases con TW me fué muy confuso su uso
-
-[x] Accesibilidad revisada tras cambios visuales
-
-[x] Animaciones y transiciones aplicadas con criterio 
-
-[x] README actualizado con Iteración 3
-
-[x] Proyecto listo para entrega y despliegue
-
----
-
-✅ Opinión personal sobre la iteración:
-
-En la mayoria del proceso, el uso de Tailwind me resultó muy confuso desde el principio, ya que no se por que motivos de sobre escritura 
-y el poco dominio de Git tube que empezar todo el sprint de nuevo. 
-
-He aprendido a equilibrar estructura y estética, y a tomar decisiones más conscientes sobre proporciones, 
-espaciado y jerarquía visual y sobre todo a dominar la frustración y continuar hasta conseguir mi objetivo.
-
-Me quedo con la satisfacción de haber convertido un layout caótico en una composición ordenada y adaptable.
-
-✍️ Autor
-Nombre: Toni Valls 
-Proyecto: IT Academy – Sprint 1: Maquetación Bookmark Landing Page 
-Año: 2025
+Copia el codi
+git add .
+git commit -m "feat: implementa TailwindCSS"
+git push origin feature/tailwind

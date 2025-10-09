@@ -13,16 +13,14 @@
 <body class="font-['Rubik'] text-gray-700">
     <header class="flex items-center justify-between max-w-7xl mx-auto px-6 py-4 bg-tab-custom"
         aria-label="Main header">
-        <!-- Logo -->
+
         <h1>
             <img src="assets/images/logo-bookmark.svg" alt="Bookmark logo" class="h-6">
         </h1>
 
-        <!-- Toggle menú (només mòbil) -->
         <input type="checkbox" id="menu-toggle" class="peer hidden" aria-label="Menu toggle">
 
 
-        <!-- Navegació desktop -->
         <nav class="hidden md:flex items-center gap-8 text-gray-700 font-medium" aria-label="Primary navigation">
             <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
             <a href="#pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
@@ -32,15 +30,15 @@
             </button>
         </nav>
 
-        <!-- Icona hamburguesa (només visible en mòbil) -->
+
         <label for="menu-toggle" class="cursor-pointer z-50 md:hidden" aria-label="Open menu">
             <img class="pr-2" src="assets/images/icon-hamburger.svg" alt="Menu icon">
         </label>
-        <!-- Menú mòbil -->
+
         <nav class="hidden peer-checked:flex peer-checked:flex-col peer-checked:items-center peer-checked:justify-start peer-checked:pt-24 peer-checked:gap-6 peer-checked:bg-indigo-950/90 text-white peer-checked:fixed peer-checked:top-0 peer-checked:left-0 peer-checked:w-full peer-checked:h-screen z-40 md:hidden"
             aria-label="Mobile navigation">
 
-            <!-- Tanca menú -->
+
             <label for="menu-toggle" class="absolute top-6 right-6 cursor-pointer z-50" aria-label="Close menu">
                 <img src="assets/images/icon-close.svg" alt="Close icon">
             </label>
@@ -50,7 +48,7 @@
                 <img src="assets/images/logo-bookmark-menu.svg" alt="Bookmark logo">
             </div>
 
-            <!-- Enllaços -->
+
             <ul class="flex flex-col items-center w-full px-6 text-white text-lg font-medium gap-4">
                 <li class="w-full flex flex-col items-center">
                     <div class="w-3/4 h-px bg-white opacity-30 mb-2"></div>
@@ -92,7 +90,7 @@
         <section
             class="flex flex-col-reverse items-center justify-center px-6 py-10 mb-10 relative overflow-hidden md:flex-row"
             aria-label="Hero section">
-            <article class="flex w-full max-w-md text-center z-10">
+            <article class="w-full max-w-md text-center z-10">
                 <h2 class="text-gray-800 text-[clamp(2.0rem,5vw,2.25rem)]  font-semibold leading-tight mb-4">
                     A Simple Bookmark Manager
                 </h2>
@@ -107,7 +105,7 @@
                 </div>
             </article>
 
-            <!-- canvio a div per coontrolar millor -->
+
             <figure class="relative w-full max-w-lg flex justify-center">
                 <img src="assets/images/illustration-hero.svg" alt="Illustració de la aplicació Bookmark"
                     class="w-full h-auto z-10" />
@@ -121,12 +119,12 @@
             <div class="features-layout flex flex-col items-center gap-16 md:flex-row md:items-start">
                 <div class="features-tabs w-full max-w-5xl">
 
-                    <!-- Inputs -->
+
                     <input type="radio" name="featureTab" id="tab1" class="hidden peer/tab1" checked>
                     <input type="radio" name="featureTab" id="tab2" class="hidden peer/tab2">
                     <input type="radio" name="featureTab" id="tab3" class="hidden peer/tab3">
 
-                    <!-- Labels -->
+
                     <div class="flex flex-col items-center gap-1 mb-6 text-center w-[100%] mx-auto border-t border-gray-300 md:flex-row"
                         role="tablist">
                         <div class=" items-center  text-center w-[95%] mx-auto border-b border-gray-300" role="tab">
@@ -151,22 +149,22 @@
                             </label>
                         </div>
                     </div>
-                    <!-- Contingut Tabs -->
+
                     <div class="tabs-content-wrapper relative mt-8 md:flex  ">
 
                         <div class="flex flex-col md:flex-row gap-8">
 
-                            <!-- TAB 1 -->
+
                             <div class="tab-content-tab1 flex flex-col md:flex-row items-center gap-12 mb-12 ">
                                 <figure class="flex-1 relative max-w-4xl z-10 ">
                                     <img src="assets/images/illustration-features-tab-1.svg"
-                                    alt="Illustració secció features" class="w-4/5 mx-auto h-auto z-10 relative">
+                                        alt="Illustració secció features" class="w-4/5 mx-auto h-auto z-10 relative">
                                     <div
-                                    class="absolute -bottom-10 left-0 w-4/5 aspect-[2/1] bg-[hsl(231,74%,50%)] rounded-tr-[200px] rounded-br-[200px] -z-10">
-                                </div>
-                            </figure>
-                            
-                            
+                                        class="absolute -bottom-10 left-0 w-4/5 aspect-[2/1] bg-[hsl(231,74%,50%)] rounded-tr-[200px] rounded-br-[200px] -z-10">
+                                    </div>
+                                </figure>
+
+
                                 <article class="article-text flex-1 m-0 pl-0 md:pl-12  text-center md:text-left">
                                     <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">
                                         Bookmark in one click
@@ -183,55 +181,55 @@
                                 </article>
                             </div>
 
-                              
-                                <div class="tab-content-tab2 hidden">
-                                    <figure class="flex-1 relative max-w-4xl z-10 ">
-                                        <img src="assets/images/illustration-features-tab-2.svg"
-                                            alt="Illustració secció features" class="w-4/5 mx-auto h-auto">
-                                        <div
-                                            class="absolute -bottom-8 left-3 w-4/5 aspect-[2/1] bg-[hsl(231,74%,50%)] rounded-tr-[200px] rounded-br-[200px] -z-10">
-                                        </div>
-                                    </figure>
-                                    <article class="flex-1 pl-0 md:pl-12 text-center md:text-left pt-9.5">
-                                        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 ">
-                                            Intelligent search
-                                        </h2>
-                                        <p class="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
-                                            Our powerful search feature will help you find saved sites in no time at all.
-                                            No need to trawl through all of your bookmarks.
-                                        </p>
-                                        <button
-                                            class="btn-info w-40 md:w-48 py-2 text-sm rounded-xl bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600 transition-colors">
-                                            More info
-                                        </button>
-                                    </article>
-                                </div>
-    
-                              
-                                <div class="tab-content-tab3 hidden">
-                                    <figure class="flex-1 relative max-w-4xl z-10">
-                                        <img src="assets/images/illustration-features-tab-3.svg"
-                                            alt="Illustració secció features" class="w-4/5 mx-auto h-auto">
-                                        <div
-                                            class="absolute -bottom-10 left-0 w-4/5 aspect-[2/1] bg-[hsl(231,74%,50%)] rounded-tr-[200px] rounded-br-[200px] -z-10">
-                                        </div>
-                                    </figure>
-                                    <article class="flex-1 pl-0 md:pl-12 text-center md:text-left pt-9.5">
-                                        <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Share your
-                                            bookmarks
-                                        </h2>
-                                        <p class="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
-                                            Easily share your bookmarks and collections with others. Create a shareable link
-                                            that
-                                            you can send at the click of a button.
-                                        </p>
-                                        <button
-                                            class="btn-info w-40 md:w-48 py-2 text-sm rounded-xl bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600 transition-colors">
-                                            More info
-                                        </button>
-                                    </article>
-                                </div>
-                              
+
+                            <div class="tab-content-tab2 hidden">
+                                <figure class="flex-1 relative max-w-4xl z-10 ">
+                                    <img src="assets/images/illustration-features-tab-2.svg"
+                                        alt="Illustració secció features" class="w-4/5 mx-auto h-auto">
+                                    <div
+                                        class="absolute -bottom-8 left-3 w-4/5 aspect-[2/1] bg-[hsl(231,74%,50%)] rounded-tr-[200px] rounded-br-[200px] -z-10">
+                                    </div>
+                                </figure>
+                                <article class="flex-1 pl-0 md:pl-12 text-center md:text-left pt-9.5">
+                                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 ">
+                                        Intelligent search
+                                    </h2>
+                                    <p class="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
+                                        Our powerful search feature will help you find saved sites in no time at all.
+                                        No need to trawl through all of your bookmarks.
+                                    </p>
+                                    <button
+                                        class="btn-info w-40 md:w-48 py-2 text-sm rounded-xl bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600 transition-colors">
+                                        More info
+                                    </button>
+                                </article>
+                            </div>
+
+
+                            <div class="tab-content-tab3 hidden">
+                                <figure class="flex-1 relative max-w-4xl z-10">
+                                    <img src="assets/images/illustration-features-tab-3.svg"
+                                        alt="Illustració secció features" class="w-4/5 mx-auto h-auto">
+                                    <div
+                                        class="absolute -bottom-10 left-0 w-4/5 aspect-[2/1] bg-[hsl(231,74%,50%)] rounded-tr-[200px] rounded-br-[200px] -z-10">
+                                    </div>
+                                </figure>
+                                <article class="flex-1 pl-0 md:pl-12 text-center md:text-left pt-9.5">
+                                    <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4">Share your
+                                        bookmarks
+                                    </h2>
+                                    <p class="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
+                                        Easily share your bookmarks and collections with others. Create a shareable link
+                                        that
+                                        you can send at the click of a button.
+                                    </p>
+                                    <button
+                                        class="btn-info w-40 md:w-48 py-2 text-sm rounded-xl bg-blue-600 text-white hover:bg-white hover:text-blue-600 hover:border-2 hover:border-blue-600 transition-colors">
+                                        More info
+                                    </button>
+                                </article>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -257,7 +255,6 @@
             </article>
 
             <div class=" flex flex-col md:flex-row flex-wrap  justify-between items-center w-[70%] mx-auto">
-                <!-- Card 1 -->
                 <article
                     class="bg-white rounded-xl shadow-lg p-4  text-center max-w-xs w-160 flex flex-col items-center gap-4">
                     <img src="assets/images/logo-chrome.svg" alt="Install extension with Chrome" class="w-16 pt-4 pb-2">
@@ -269,8 +266,6 @@
                         Add & install Extension
                     </button>
                 </article>
-
-                <!-- Card 2 -->
                 <article
                     class="bg-white rounded-xl shadow-lg p-4 mask-l-from-3.5  text-center max-w-xs w-160 flex flex-col items-center gap-4">
                     <img src="assets/images/logo-firefox.svg" alt="Install extension with Firefox"
@@ -279,12 +274,10 @@
                     <p class="text-sm text-gray-600">Minimum version 55</p>
                     <img src="assets/images/bg-dots.svg" alt="" class="w-40 my-4">
                     <button
-                       class="bg-blue-600 text-white text-sm w-3.5 py-3 px-5 rounded-lg hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 transition-colors">
+                        class="bg-blue-600 text-white text-sm w-3.5 py-3 px-5 rounded-lg hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 transition-colors">
                         Add & install Extension
                     </button>
                 </article>
-
-                <!-- Card 3 -->
                 <article
                     class="bg-white rounded-xl shadow-lg p-4  text-center max-w-xs w-160 flex flex-col items-center gap-4">
                     <img src="assets/images/logo-opera.svg" alt="Install extension with Opera" class="w-16  pt-4 pb-2">
@@ -299,7 +292,6 @@
             </div>
         </section>
 
-
         <!--FAQs -->
         <section id="faqs" class="flex flex-col justify-center text-center px-4 py-10">
             <article class="w-full max-w-md mx-auto mb-8">
@@ -311,7 +303,6 @@
             </article>
 
             <div class="w-full max-w-2xl mx-auto">
-                <!-- FAQ Item -->
                 <details
                     class="group faq-item bg-[var(--bg-color)] border-b border-[var(--text-paragraph)] mb-4 p-4 text-left relative">
                     <summary
@@ -326,8 +317,6 @@
                         laudantium.
                     </p>
                 </details>
-
-                <!-- Repetim per la resta -->
                 <details
                     class="group faq-item bg-[var(--bg-color)] border-b border-[var(--text-paragraph)] mb-4 p-4 text-left relative"
                     open>
@@ -381,17 +370,9 @@
             </button>
         </section>
 
-
-
-
-
-
         <!-- SUBSCRIBE -->
         <section id="subscribe"
             class="relative bg-white px-6 py-12 flex flex-col items-center text-center overflow-hidden">
-            <!-- Shape decoratiu -->
-
-
             <div class="subscribe-container w-full max-w-xl  h-auto z-10">
                 <p class="text-white mb-5 text-lg">35.000+ ALREADY JOINED</p>
                 <h2 class="text-2xl md:text-3xl font-semibold text-white mb-6">
@@ -400,7 +381,6 @@
 
                 <form class=" contact-form flex flex-col gap-4 sm:flex-row items-start sm:items-center" novalidate>
                     <label for="email" class=" sr-only">Enter your email address</label>
-
                     <div class=" input-wrapper relative  w-full sm:flex-1">
                         <input type="email" id="email" name="email" placeholder="Enter your email address" required
                             class="w-4/4 px-0 py-2 rounded-lg border bg-white border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600 text-gray-800">
@@ -421,32 +401,33 @@
 
     </main>
 
-    
-       <footer class="bg-gray-900 text-white px-6 py-8 flex flex-col md:flex-row justify-start items-center gap-6 text-center md:text-left">
-    <div class="logo-links flex flex-col md:flex-row items-center gap-6 md:gap-8">
-        <div class="especial-logo">
-            <img src="assets/images/logo-bookmark-footer.svg" alt="Bookmark logo" class="h-6">
+
+    <footer
+        class="bg-gray-900 text-white px-6 py-8 flex flex-col md:flex-row justify-start items-center gap-6 text-center md:text-left">
+        <div class="logo-links flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            <div class="especial-logo">
+                <img src="assets/images/logo-bookmark-footer.svg" alt="Bookmark logo" class="h-6">
+            </div>
+
+            <nav class="nav-footer" aria-label="Footer navigation">
+                <ul class="flex flex-col md:flex-row gap-4 md:gap-8 ">
+                    <li><a href="#features" class="hover:text-red-400 transition-colors">Features</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition-colors">Pricing</a></li>
+                    <li><a href="#subscribe" class="hover:text-red-400 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <nav class="nav-footer" aria-label="Footer navigation">
-            <ul class="flex flex-col md:flex-row gap-4 md:gap-8 ">
-                <li><a href="#features" class="hover:text-red-400 transition-colors">Features</a></li>
-                <li><a href="#" class="hover:text-red-400 transition-colors">Pricing</a></li>
-                <li><a href="#subscribe" class="hover:text-red-400 transition-colors">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+        <div class="social flex gap-6 md:ml-auto">
+            <a href="#" aria-label="Follow us on Facebook">
+                <img src="assets/images/icon-facebook.svg" alt="Facebook" class="h-6 icon-social transition-all">
+            </a>
+            <a href="#" aria-label="Follow us on Twitter">
+                <img src="assets/images/icon-twitter.svg" alt="Twitter" class="h-6 icon-social transition-all">
+            </a>
+        </div>
 
-    <div class="social flex gap-6 md:ml-auto">
-        <a href="#" aria-label="Follow us on Facebook">
-            <img src="assets/images/icon-facebook.svg" alt="Facebook" class="h-6 icon-social transition-all">
-        </a>
-        <a href="#" aria-label="Follow us on Twitter">
-            <img src="assets/images/icon-twitter.svg" alt="Twitter" class="h-6 icon-social transition-all">
-        </a>
-    </div>
-
-</footer>
+    </footer>
 
     <script src="main.js"></script>
 </body>
