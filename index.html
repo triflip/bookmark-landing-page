@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
-    <!-- per importar tipografia Rubic externa -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <title>Bookmart-landing-page</title>
 </head>
@@ -22,14 +21,13 @@
         </label>
 
         <nav class="nav-header">
-            <!-- Botó de tancament -->
             <label for="menu-toggle" class="menu-close" aria-label="Close menu">
                 <img src="assets/images/icon-close.svg" alt="Close icon">
             </label>
             <div class="logo-hamburguesa"><img src="assets/images/logo-bookmark-footer.svg" alt="Bookmark logo"></div>
 
             <ul class="nav-links">
-                <li><a href="#features">FEATURES</a></li> <!--enllaç intern-->
+                <li><a href="#features">FEATURES</a></li>
                 <li><a href="#" aria-disabled="true" style="pointer-events: none;">PRICING</a></li>
                 <li><a href="#">CONTACT</a></li>
             </ul>
@@ -47,11 +45,12 @@
 
     <main class="main">
 
-        <!-- HERO SECTION -->
+
         <section class="hero-section" aria-label="Hero section">
             <article class="article-text">
                 <h2 class="hero-title">A Simple Bookmark Manager</h2>
-                <p class="hero-text">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your
+                <p class="hero-text">A clean and simple interface to organize your favourite websites. Open a new
+                    browser tab and see your
                     sites load instantly. Try it for free.</p>
                 <div class="hero-buttons" role="group" aria-label="Browser download options"> <!--ARIA??-->
                     <button class="btn btn-chrome" aria-label="Chrome button">Get it on Chrome</button>
@@ -63,7 +62,7 @@
                 <div class="hero-background-shape"></div>
             </figure>
         </section>
-        <!-- HERO SECTION -->
+
         <section id="features" aria-label="Features section">
             <article class="article-text">
                 <h2>Features</h2>
@@ -72,19 +71,16 @@
 
             <div class="features-layout">
                 <div class="features-tabs">
-                    <!-- Inputs -->
                     <input type="radio" name="featureTab" id="tab1" class="tab-toggle" checked>
                     <input type="radio" name="featureTab" id="tab2" class="tab-toggle">
                     <input type="radio" name="featureTab" id="tab3" class="tab-toggle">
 
-                    <!-- Labels -->
                     <div class="tab-buttons" role="tablist">
                         <label for="tab1" class="tab-button" role="tab">Simple Bookmarking</label>
                         <label for="tab2" class="tab-button" role="tab">Speedy Searching</label>
                         <label for="tab3" class="tab-button" role="tab">Easy Sharing</label>
                     </div>
 
-                    <!-- Contingut pestanyes -->
                     <div class="tabs-content-wrapper">
                         <div class="tab-content-tab1" role="tabpanel">
                             <figure>
@@ -132,14 +128,6 @@
             </div>
         </section>
 
-
-
-
-        </div>
-        </section>
-
-
-        <!-- DOWNLOAD -->
         <section id="download-section">
             <article class="article-text">
                 <h2>Download the extension</h2>
@@ -176,7 +164,6 @@
             </div>
         </section>
 
-        <!--FAQs -->
         <section id="faqs">
             <article class="article-text">
                 <h2>Frequently Asked Questions</h2>
@@ -213,7 +200,7 @@
             </details>
             <button class="btn btn-info">More info</button>
         </section>
-        <!-- SUBSCRIBE -->
+       
         <section id="subscribe">
             <div class="subscribe-background-shape"></div>
 
@@ -229,8 +216,6 @@
                     </div>
                     <button type="submit" class="btn btn-contact">Contact Us</button>
                 </form>
-
-
             </div>
         </section>
 

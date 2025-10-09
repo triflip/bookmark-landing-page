@@ -1,6 +1,5 @@
-/* ===================== */
-/* RESET + VARIABLES     */
-/* ===================== */
+
+/* Reset */
 * {
   margin: 0;
   padding-top: 0;
@@ -34,8 +33,7 @@ p {
   color: var(--text-paragraph);
 }
 
-/* VARIABLES */
-/* ----------*/
+/* Variables */
 :root {
   --bg-color: #fdfdfd;
   --text-color: #262c40;
@@ -180,7 +178,7 @@ p {
 .tab-button:hover {
   color: var(--accent-color);
 }
-/* filter!! */
+/* filter */
 .social a:hover img {
   filter: var(--filter-color)
 }
