@@ -11,7 +11,7 @@ ecto
 git clone https://github.com/triflip/bookmark-landing-page.git
 cd bookmark-landing-page
 
-git checkout feature/vailla-implementation
+git checkout feature/vanilla-implementation
 
 2️⃣ Abrir el proyecto
 
