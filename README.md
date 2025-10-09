@@ -4,13 +4,28 @@ Landing page de Bookmark creada solo con **HTML y CSS**.
 
 ---
 
-## 🚀 Cómo usar este proyecto
+ecto
 
 1️⃣ **Clonar el repositorio**
 ```bash
-git clone <URL-de-tu-repo>
+git clone https://github.com/triflip/bookmark-landing-page.git
 cd bookmark-landing-page
-```
+
+git checkout feature/vailla-implementation
+
+2️⃣ Abrir el proyecto
+
+Abre el archivo index.html en tu navegador o usa la extensión Live Server desde VS Code.
+
+3️⃣ Explorar el código
+
+Carpeta assets/ → imágenes
+
+index.html → estructura
+
+style.css → estilos base
+
+---
 
 2️⃣ **Abrir el proyecto**
 - Abre el archivo `index.html` en tu navegador  
@@ -31,18 +46,7 @@ cd bookmark-landing-page
 
 ---
 
-## 💡 Buenas prácticas Git
-Haz commits claros mientras trabajas:
-```bash
-git add .
-git commit -m "feat: añade estructura HTML"
-git push origin feature/vanilla-implementation
-```
-
----
-
 ## ✅ Checklist final
 - [x] HTML validado  
 - [x] Diseño responsive  
 - [x] Accesible (WCAG básica)  
-- [x] Proyecto listo para GitHub Pages
