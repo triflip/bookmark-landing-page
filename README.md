@@ -1,4 +1,4 @@
-[# 🧭 Sprint 1: Maquetación Bookmark Landing Page
+# 🧭 Sprint 1: Maquetación Bookmark Landing Page
 
 ## 📘 Descripción del Proyecto
 
@@ -17,21 +17,16 @@ El objetivo principal es **aprender y aplicar buenas prácticas de maquetación*
 
 ---
 
-## 🧰 Herramientas y Tecnologías
-
-- **HTML5** → estructura semántica del contenido.
-- **CSS3 / TailwindCSS** → estilos, layout y diseño responsive.
-- **VS Code** → editor principal.
-- **Git + GitHub** → control de versiones y colaboración.
-- **GitHub Pages** → despliegue de la versión final.
-- **Herramientas de validación** → W3C Validator, Wave, contrast checkers.
+## 🧩 Qué incluye
+- HTML semántico (header, main, footer)
+- CSS con enfoque **Mobile First**
+- Flexbox y Grid
+- Imágenes optimizadas + texto alternativo
 
 ---
 
-## 🚀 Pasos para Ejecutar el Proyecto
-
-### 1️⃣ Clonar y configurar el repositorio
-
+## 💡 Buenas prácticas Git
+Haz commits claros mientras trabajas:
 ```bash
 git clone https://github.com/IT-Academy-BCN/bookmark-landing-page.git
 cd bookmark-landing-page
@@ -105,4 +100,4 @@ git push origin main
 ✍️ Autor
 Nombre: Toni Valls 
 Proyecto: IT Academy – Sprint 1: Maquetación Bookmark Landing Page 
-Año: 2025](https://github.com/triflip/bookmark-landing-page/tree/feature/sass-implementation)
+Año: 2025
