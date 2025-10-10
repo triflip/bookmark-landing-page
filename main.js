@@ -29,7 +29,7 @@ document.querySelector(".contact-form").addEventListener("submit", function (e) 
 
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
-        menuToggle.checked = false; // Tanca el menú
+        menuToggle.checked = false; 
       });
     });
   });
