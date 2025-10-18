@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 15px;
   scroll-behavior: smooth;
 }
 
@@ -53,47 +53,30 @@ p {
   display: inline-block;
   font-size: 1rem;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.4rem;
   cursor: pointer;
-  border-radius: 1rem;
-  
   width: 20%;
   padding: 1rem 0.5rem;
   color: var(--bg-color);
   text-align: center;
-}
-
-.btn-contact {
-  width: 100%;
-  max-width: 400px;
-  padding: 1rem;
-  font-size: 1rem;
-  border-radius: 8px;
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-  border: none;
-  cursor: pointer;
-  transition: var(--bg-color) 0.3s ease;
-  text-align: center;
-}
-
-.btn-contact:hover {
-  background-color: var(--bg-color);
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-}
-
-.btn-info,
-.btn-chrome,
-.btn-extension {
   background-color: var(--primary-color);
-  color: var(--bg-color);
 }
+.btn-login {
+  width: 70%;
+  background-color: transparent;
+  border: 1px solid var(--bg-color);
+  border-radius: 0.4rem;
+  margin-bottom: 7rem;
+}
+.btn-login:hover  {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color)
+}
+
 .btn-chrome,
 .btn-firefox {
   width: 45%;
 }
-
 .btn-chrome:hover {
   background-color: var(--bg-color);
   color: var(--primary-color);
@@ -104,7 +87,6 @@ p {
   border: 2px solid var(--text-color);
   background-color: transparent;
   border-radius: 0.5rem;
-  cursor: pointer;
 }
 .btn-firefox:hover {
   background-color: var(--bg-color);
@@ -119,8 +101,6 @@ p {
   margin-bottom: 2rem;
   background-color: var(--primary-color);
   color: var(--bg-color);
-  border: none;
-  cursor: pointer;
   transition: background-color 0.3s ease;
   border: 2px solid var(--primary-color);
 }
@@ -178,13 +158,27 @@ p {
 .tab-button:hover {
   color: var(--accent-color);
 }
-/* filter */
-.social a:hover img {
-  filter: var(--filter-color)
-}
+
 
 .faq-item summary:hover {
   color: var(--accent-color);
+}
+.btn-contact {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  transition: var(--bg-color) 0.3s ease;
+  text-align: center;
+}
+
+.btn-contact:hover {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
 /* HEADERr */
@@ -278,13 +272,6 @@ p {
   transition: background-color 0.3s ease;
 }
 
-.btn-login {
-  width: 70%;
-  background-color: transparent;
-  border: 1px solid var(--bg-color);
-  border-radius: 0.4rem;
-  margin-bottom: 7rem;
-}
 
 .social-icons {
   display: flex;
@@ -312,6 +299,9 @@ p {
   width: 3vw;
   height: 3vw;
 }
+.social a:hover img {
+  filter: var(--filter-color)
+}
 
 /* ===================== */
 /* MAIN */
@@ -321,7 +311,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-
   padding-bottom: 0;
 }
 /* ===================== */
@@ -767,15 +756,9 @@ figure {
     display: none;
   }
 .btn-login {
+  margin-bottom: 0;
   width: 20%;
-  font-size: 1rem;
-  border-radius: 8px;
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  
+  background-color: var(--accent-color); 
 }
 
 .btn-login:hover  {
@@ -851,9 +834,7 @@ figure {
     justify-content: center;
   }
 
-  .btn-login {
-    margin-bottom: 0;
-  }
+ 
   /* ===================== */
   /* HERO             */
   /* ===================== */
@@ -890,10 +871,17 @@ figure {
   }
 
   .hero-section figure {
-    width: 100%;
+    width: auto;
     max-width: 800px;
     flex: 1;
   }
+
+  .hero-section figure  img{
+    width: auto;
+    flex: 1;
+  }
+
+
   
   .hero-buttons {
     display: flex;
@@ -905,7 +893,7 @@ figure {
   .hero-background-shape {
     display: flex;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 20%;
     aspect-ratio: 2 / 1;
     width: 100%;
