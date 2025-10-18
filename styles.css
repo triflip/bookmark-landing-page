@@ -1,4 +1,3 @@
-
 /* Reset */
 * {
   margin: 0;
@@ -42,8 +41,8 @@ p {
   --primary-color: #5364db;
   --accent-color: #ef5f5f;
   --tg-menu-color: rgba(25, 31, 53, 0.95);
-  --filter-color: brightness(0) saturate(100%) invert(28%) sepia(73%) saturate(4801%)
-  hue-rotate(342deg) brightness(94%) contrast(91%);
+  --filter-color: brightness(0) saturate(100%) invert(28%) sepia(73%)
+    saturate(4801%) hue-rotate(342deg) brightness(94%) contrast(91%);
   --tab-color: hsl(229, 8%, 60%);
   --tab-buttons: #ccc;
   --shape: hsl(231, 74%, 50%);
@@ -68,9 +67,9 @@ p {
   border-radius: 0.4rem;
   margin-bottom: 7rem;
 }
-.btn-login:hover  {
+.btn-login:hover {
   border: 2px solid var(--accent-color);
-  color: var(--accent-color)
+  color: var(--accent-color);
 }
 
 .btn-chrome,
@@ -128,7 +127,6 @@ p {
   border-radius: 1rem;
 }
 
-
 .btn-contact:hover {
   background-color: var(--bg-color);
 }
@@ -158,7 +156,6 @@ p {
 .tab-button:hover {
   color: var(--accent-color);
 }
-
 
 .faq-item summary:hover {
   color: var(--accent-color);
@@ -272,7 +269,6 @@ p {
   transition: background-color 0.3s ease;
 }
 
-
 .social-icons {
   display: flex;
   gap: 2rem;
@@ -300,7 +296,7 @@ p {
   height: 3vw;
 }
 .social a:hover img {
-  filter: var(--filter-color)
+  filter: var(--filter-color);
 }
 
 /* ===================== */
@@ -574,7 +570,7 @@ figure {
 .faq-item[open] .faq-arrow {
   transform: rotate(180deg);
   filter: invert(25%) sepia(96%) saturate(748%) hue-rotate(345deg)
-  brightness(92%) contrast(91%);
+    brightness(92%) contrast(91%);
 }
 
 /* ===================== */
@@ -599,7 +595,7 @@ figure {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color:var(--shape);
+  background-color: var(--shape);
   z-index: 0;
 }
 
@@ -687,7 +683,7 @@ figure {
   background-color: var(--text-color);
   padding: 2rem;
   text-align: center;
-  color:var(--bg-color);
+  color: var(--bg-color);
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
@@ -755,17 +751,17 @@ figure {
   .menu-hamburguer {
     display: none;
   }
-.btn-login {
-  margin-bottom: 0;
-  width: 20%;
-  background-color: var(--accent-color); 
-}
+  .btn-login {
+    margin-bottom: 0;
+    width: 20%;
+    background-color: var(--accent-color);
+  }
 
-.btn-login:hover  {
-  background-color: var(--bg-color);
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-}
+  .btn-login:hover {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+  }
 
   .tab-button::after {
     content: "";
@@ -834,7 +830,6 @@ figure {
     justify-content: center;
   }
 
- 
   /* ===================== */
   /* HERO             */
   /* ===================== */
@@ -876,20 +871,19 @@ figure {
     flex: 1;
   }
 
-  .hero-section figure  img{
+  .hero-section figure img {
     width: auto;
     flex: 1;
   }
 
-
-  
   .hero-buttons {
     display: flex;
     gap: 1rem;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: end;;
+    justify-content: end;
   }
+
   .hero-background-shape {
     display: flex;
     position: absolute;
@@ -915,23 +909,21 @@ figure {
     gap: 4rem;
   }
 
-
- 
   .tab-buttons {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 5rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--tab-buttons);
-}
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--tab-buttons);
+  }
 
   .tabs-content-wrapper > div {
     display: none;
     margin-top: 2rem;
     margin-left: 2rem;
   }
-  
+
   #tab1:checked ~ .tabs-content-wrapper .tab-content-tab1,
   #tab2:checked ~ .tabs-content-wrapper .tab-content-tab2,
   #tab3:checked ~ .tabs-content-wrapper .tab-content-tab3 {
@@ -941,7 +933,7 @@ figure {
     gap: 4rem;
     margin-bottom: 3rem;
   }
-  
+
   .tabs-content-wrapper figure {
     flex: 1;
     margin: 0;
@@ -949,21 +941,21 @@ figure {
     max-width: 800px;
     z-index: 1;
   }
-  
+
   .tabs-content-wrapper figure img {
     height: auto;
     max-width: 800px;
     display: block;
     margin: 0 auto;
   }
-  
+
   .tabs-content-wrapper .article-text {
     flex: 1;
     margin: 0;
     padding-left: 3rem;
     text-align: left;
   }
-  
+
   .features-background-shape {
     position: absolute;
     bottom: -10%;
@@ -975,7 +967,6 @@ figure {
     border-top-right-radius: 200px;
     border-bottom-right-radius: 200px;
   }
-  
 
   /* ===================== */
   /* DOWNLOAD              */
