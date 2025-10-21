@@ -1,10 +1,12 @@
 # Iteración 1 – HTML + CSS (Maquetación base)
 
-Landing page de Bookmark creada solo con **HTML y CSS**.
+📋 Descripción
+
+Creación de landing page creada con **HTML y CSS**.
 
 ---
 
-ecto
+🛠️ Instalación
 
 1️⃣ **Clonar el repositorio**
 ```bash
@@ -26,6 +28,8 @@ index.html → estructura
 style.css → estilos base
 
 ---
+
+▶ Ejecución
 
 2️⃣ **Abrir el proyecto**
 - Abre el archivo `index.html` en tu navegador  
