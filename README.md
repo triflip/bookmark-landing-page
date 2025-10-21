@@ -6,6 +6,15 @@ Creación de landing page creada con **HTML y CSS**.
 
 ---
 
+💻 Tecnologias usadas
+
+ ◉ VSCode
+ ◉ Git
+ ◉ GitHub
+ ◉ Wave
+
+ ---
+
 🛠️ Instalación
 
 1️⃣ **Clonar el repositorio**
