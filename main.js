@@ -16,7 +16,6 @@ document.querySelector(".contact-form").addEventListener("submit", function (e) 
     emailInput.classList.remove("invalid");
     errorIcon.style.display = "none";
     errorText.style.display = "none";
-    // Aquí pots mostrar un missatge d’èxit o fer el submit real
   }
 });
 
@@ -29,7 +28,7 @@ document.querySelector(".contact-form").addEventListener("submit", function (e) 
 
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
-        menuToggle.checked = false; // Tanca el menú
+        menuToggle.checked = false; 
       });
     });
   });
