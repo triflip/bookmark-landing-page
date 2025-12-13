@@ -46,22 +46,12 @@ npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 
 ---
 
-## 🧩 Objetivos del proyecto
-- Aplicar HTML semántico y accesible.  
-- Diseñar de forma **Mobile First**.  
-- Usar herramientas modernas (Tailwind, npm).  
-- Seguir buenas prácticas de control de versiones.  
+## ✅ Checklist final
+- [x] Tailwind funcionando  
+- [x] Responsive completo  
+- [x] Accesibilidad OK  
+- [x] Listo para desplegar en GitHub Pages
 
----
 
-## ✅ Estado del proyecto
-✔️ Iteración 1 completada  
-✔️ Iteración 2 completada  
-🚧 Iteración 3 (Tailwind)   
-
----
-
-## 🧠 Recursos útiles
-- [Guía de accesibilidad WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)
-- [Documentación TailwindCSS](https://tailwindcss.com/docs)
-- [GitHub Pages Deployment](https://docs.github.com/es/pages)
+## Visit site
+[![See Demo](https://img.shields.io/badge/See%20Demo-9932CC?style=for-the-badge)](https://triflip.github.io/bookmark-landing-page/)
